@@ -49,7 +49,7 @@ const Contact = ({}: ContactProps) => {
           onSubmit={(e) => handleSubmit(e)}
           className="flex flex-col items-center gap-4"
         >
-          <div className="floating-label-effect w-1/2">
+          <div className="floating-label-effect w-[50vw]">
             <input
               type="text"
               id="name"
@@ -63,7 +63,7 @@ const Contact = ({}: ContactProps) => {
               Name<span className="text-red-500">*</span>
             </label>
           </div>
-          <div className="floating-label-effect w-1/2">
+          <div className="floating-label-effect w-[50vw]">
             <input
               type="email"
               id="email"
@@ -76,7 +76,7 @@ const Contact = ({}: ContactProps) => {
               Email<span className="text-red-500">*</span>
             </label>
           </div>
-          <div className="floating-label-effect w-1/2">
+          <div className="floating-label-effect w-[50vw]">
             <input
               type="tel"
               id="phone"
@@ -86,14 +86,8 @@ const Contact = ({}: ContactProps) => {
             />
             <label htmlFor="phone">Phone</label>
           </div>
-          <div className="floating-label-effect w-1/2">
-            <input
-              type="text"
-              id="message"
-              name="message"
-              placeholder=""
-              required
-            />
+          <div className="floating-label-effect w-[50vw]">
+            <textarea id="message" name="message" placeholder="" required />
             <label htmlFor="message">
               Message <span className="text-red-500">*</span>
             </label>
@@ -101,10 +95,10 @@ const Contact = ({}: ContactProps) => {
 
           <button
             type="submit"
-            className="mt-3 py-4 px-16 text-xl bg-(--primary-color) text-(--bg-color) rounded-full shadow-[0_0_25px_0px_var(--primary-color)] hover:shadow-[0_0_25px_10px_var(--primary-color)] hover:scale-105"
+            className="mt-2 flex items-center justify-center gap-2 py-4 px-16 text-xl border-2 border-(--primary-color) bg-(--primary-color) text-(--bg-color) rounded-full shadow-[0_0_25px_0px_var(--primary-color)] hover:shadow-[0_0_25px_10px_var(--primary-color)] hover:scale-105"
           >
             Let's Talk{" "}
-            <i className="fa-solid fa-paper-plane ml-2 animate-bounce"></i>
+            <i className="fa-solid fa-paper-plane animate-bounce"></i>
           </button>
         </form>
       </main>

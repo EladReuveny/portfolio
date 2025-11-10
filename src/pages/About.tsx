@@ -409,7 +409,7 @@ const About = ({}: AboutProps) => {
       </header>
 
       <main className="mt-5">
-        <p className="text-gray-400 text-justify">
+        <p className="text-gray-400 text-center">
           I'm a dedicated Full Stack Developer/Software Engineer with a B.Sc. in
           Computer Science from The Open University of Israel. I have a
           versatile skill set, enabling me to contribute across both frontend
@@ -424,59 +424,52 @@ const About = ({}: AboutProps) => {
         <div className="flex flex-col gap-4 mt-5">
           <SkillCard
             title="Programming Languages"
-            icon={
-              <span
-                className="material-symbols-outlined mr-4 align-middle"
-                style={{ fontSize: "2.75rem" }}
-              >
-                code
-              </span>
-            }
+            icon={<i className="material-symbols-outlined text-4xl!">code</i>}
             skills={programmingLanguages}
           />
 
           <SkillCard
             title="Frontend"
-            icon={<i className="fa-solid fa-code mr-4"></i>}
+            icon={<i className="fa-solid fa-code"></i>}
             skills={frontend}
           />
 
           <SkillCard
             title="Backend"
-            icon={<i className="fa-solid fa-server mr-4"></i>}
+            icon={<i className="fa-solid fa-server"></i>}
             skills={backend}
           />
 
           <SkillCard
             title="Databases & APIs"
-            icon={<i className="fa-solid fa-database mr-4"></i>}
+            icon={<i className="fa-solid fa-database"></i>}
             skills={databasesAndApis}
           />
 
           <SkillCard
             title="DevOps &
               Deployment"
-            icon={<i className="fa-solid fa-cloud-arrow-up mr-4"></i>}
+            icon={<i className="fa-solid fa-cloud-arrow-up"></i>}
             skills={devOpsAndDeployment}
           />
 
           <SkillCard
             title="Security"
-            icon={<i className="fa-solid fa-shield mr-4"></i>}
+            icon={<i className="fa-solid fa-shield"></i>}
             skills={security}
           />
 
           <SkillCard
             title="Tools & Environment"
-            icon={<i className="fa-solid fa-wrench mr-4"></i>}
+            icon={<i className="fa-solid fa-wrench"></i>}
             skills={toolsAndEnvironment}
           />
         </div>
 
-        <div className="flex justify-center gap-5 mt-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-10">
           <Link
             to={"/projects"}
-            className="relative group flex items-center gap-1 py-4 px-16 text-xl bg-(--primary-color) text-(--bg-color) rounded-full shadow-[0_0_25px_0px_var(--primary-color)] hover:shadow-[0_0_25px_10px_var(--primary-color)] hover:scale-105"
+            className="relative group flex items-center justify-center gap-2 py-4 px-16 text-xl border-2 border-(--primary-color) bg-(--primary-color) text-(--bg-color) rounded-full shadow-[0_0_25px_0px_var(--primary-color)] hover:shadow-[0_0_25px_10px_var(--primary-color)] hover:scale-105"
           >
             My Projects
             <SliddingDashArrowIcon />
@@ -486,9 +479,9 @@ const About = ({}: AboutProps) => {
             target="_blank"
             title="Download CV"
             download
-            className="py-4 px-16 text-xl border-2 border-(--primary-color) text-(--primary-color) rounded-full shadow-[0_0_25px_0px_var(--primary-color)] hover:shadow-[0_0_25px_10px_var(--primary-color)] hover:scale-105"
+            className="flex items-center justify-center gap-2 py-4 px-16 text-xl border-2 border-(--primary-color) text-(--primary-color) rounded-full shadow-[0_0_25px_0px_var(--primary-color)] hover:shadow-[0_0_25px_10px_var(--primary-color)] hover:scale-105"
           >
-            View CV <i className="fa fa-download ml-2"></i>
+            View CV <i className="fa fa-download"></i>
           </a>
         </div>
       </main>

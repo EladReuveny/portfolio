@@ -1,17 +1,43 @@
 import { useEffect, useRef, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import useTheme from "../hooks/useTheme";
 import Logo from "./Logo";
 
 type HeaderProps = {};
 
 const Header = ({}: HeaderProps) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [customColor, setCustomColor] = useState<string>(() => {
     const storedCustomColor = localStorage.getItem("customColor");
     return storedCustomColor || "#58b0df";
   });
 
   const { theme, toggleTheme } = useTheme();
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location]);
+
+  const navLinks = [
+    {
+      path: "/about",
+      label: "About",
+    },
+    {
+      path: "/projects",
+      label: "Projects",
+    },
+    {
+      path: "/services",
+      label: "Services",
+    },
+    {
+      path: "/contact",
+      label: "Contact",
+    },
+  ];
 
   const preferencesDialog = useRef<HTMLDialogElement | null>(null);
 
@@ -21,6 +47,10 @@ const Header = ({}: HeaderProps) => {
 
   const closePreferences = () => {
     preferencesDialog.current?.close();
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
   };
 
   const toggleCustomColor = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,82 +68,39 @@ const Header = ({}: HeaderProps) => {
       <nav className="flex items-center justify-between">
         <Logo />
 
-        <ul className="flex items-center gap-6 text-lg text-gray-400">
-          <li>
-            <NavLink
-              to={"/about"}
-              className={({ isActive }) =>
-                `${
-                  isActive
-                    ? "text-(--primary-color) font-bold underline decoration-(--primary-color) decoration-2 underline-offset-6"
-                    : "hover:text-(--text-color)"
-                }`
-              }
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to={"/projects"}
-              className={({ isActive }) =>
-                `${
-                  isActive
-                    ? "text-(--primary-color) font-bold underline decoration-(--primary-color) decoration-2 underline-offset-6"
-                    : "hover:text-(--text-color)"
-                }`
-              }
-            >
-              Projects
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to={"/services"}
-              className={({ isActive }) =>
-                `${
-                  isActive
-                    ? "text-(--primary-color) font-bold underline decoration-(--primary-color) decoration-2 underline-offset-6"
-                    : "hover:text-(--text-color)"
-                }`
-              }
-            >
-              Services
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to={"/contact"}
-              className={({ isActive }) =>
-                `${
-                  isActive
-                    ? "text-(--primary-color) font-bold underline decoration-(--primary-color) decoration-2 underline-offset-6"
-                    : "hover:text-(--text-color)"
-                }`
-              }
-            >
-              Contact
-            </NavLink>
-          </li>
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex items-center gap-10 text-xl text-gray-400">
+          {navLinks.map((link) => (
+            <li key={link.path}>
+              <NavLink
+                to={link.path}
+                className={({ isActive }) =>
+                  `${
+                    isActive
+                      ? "text-(--primary-color) font-bold underline decoration-(--primary-color) decoration-2 underline-offset-6"
+                      : "hover:text-(--text-color)"
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
 
-        <div className="flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-3 text-xl">
           {theme === "dark" ? (
-            <span
-              className="material-symbols-outlined light-mode cursor-pointer hover:-translate-y-0.5 hover:text-yellow-200"
+            <i
+              className="fa-solid fa-sun cursor-pointer hover:-translate-y-0.5 hover:text-yellow-200"
               title="Light Mode"
               onClick={() => toggleTheme("light")}
-            >
-              light_mode
-            </span>
+            ></i>
           ) : (
-            <span
-              className="material-symbols-outlined dark-mode cursor-pointer hover:-translate-y-0.5 hover:text-teal-400"
+            <i
+              className="fa-solid fa-moon cursor-pointer hover:-translate-y-0.5 hover:text-teal-400"
               title="Dark Mode"
               onClick={() => toggleTheme("dark")}
-            >
-              dark_mode
-            </span>
+            ></i>
           )}
           <i
             title="Preferences"
@@ -122,37 +109,93 @@ const Header = ({}: HeaderProps) => {
           ></i>
         </div>
 
-        <dialog
-          ref={preferencesDialog}
-          className="absolute top-1/2 left-1/2 -translate-1/2 backdrop:backdrop-blur-sm w-1/2 py-3 px-4 border-3 border-(--primary-color) rounded-lg text-center"
+        <button
+          type="button"
+          className="md:hidden text-2xl hover:brightness-90"
+          onClick={toggleMenu}
+          title={`${isMenuOpen ? "Close" : "Open"} Menu`}
         >
-          <button
-            type="button"
-            className="absolute top-0 right-0 bg-(--bg-color) text-(--text-color) rounded-full w-6 h-6 hover:brightness-90"
-          >
-            <i
-              title="Close"
-              onClick={closePreferences}
-              className="fa-solid fa-xmark"
-            ></i>
-          </button>
+          <i className={`fa-solid ${isMenuOpen ? "fa-xmark" : "fa-bars"}`}></i>
+        </button>
 
-          <h2 className="text-3xl text-(--primary-color) font-bold mb-3">
-            <i className="fa-solid fa-palette mr-2"></i> Preferences
-          </h2>
-          <div className="flex items-center justify-center gap-2 text-lg">
-            <p>Choose a custom color: </p>
-            <input
-              type="color"
-              name="color"
-              id="color"
-              defaultValue={customColor}
-              onChange={(e) => toggleCustomColor(e)}
-              className="w-20 h-6 hover:scale-105"
-            />
+        {/* Mobile Navigation */}
+        <ul
+          className={`md:hidden fixed top-[60px] left-0 z-1 flex flex-col items-center gap-5 w-screen
+             text-2xl text-gray-400 bg-(--bg-color) overflow-y-auto py-4
+            ${
+              isMenuOpen ? "h-[calc(100vh-60px)] opacity-100" : "h-0 opacity-0"
+            }`}
+        >
+          {navLinks.map((link) => (
+            <li key={link.path}>
+              <NavLink
+                to={link.path}
+                className={({ isActive }) =>
+                  `${
+                    isActive
+                      ? "text-(--primary-color) font-bold underline decoration-(--primary-color) decoration-2 underline-offset-6"
+                      : "hover:text-(--text-color)"
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
+
+          <div className="flex items-center gap-4 mt-2">
+            {theme === "dark" ? (
+              <i
+                className="fa-solid fa-sun cursor-pointer hover:-translate-y-0.5 hover:text-yellow-200"
+                title="Light Mode"
+                onClick={() => toggleTheme("light")}
+              ></i>
+            ) : (
+              <i
+                className="fa-solid fa-moon cursor-pointer hover:-translate-y-0.5 hover:text-teal-400"
+                title="Dark Mode"
+                onClick={() => toggleTheme("dark")}
+              ></i>
+            )}
+            <i
+              title="Preferences"
+              onClick={openPreferences}
+              className="fa-solid fa-gear cursor-pointer hover:brightness-90 hover:-translate-y-0.5"
+            ></i>
           </div>
-        </dialog>
+        </ul>
       </nav>
+
+      <dialog
+        ref={preferencesDialog}
+        className="fixed top-1/2 left-1/2 -translate-1/2 bg-(--text-color) text-(--bg-color) backdrop:backdrop-blur-sm p-5 border-3 border-(--primary-color) rounded-lg shadow-2xl"
+      >
+        <button
+          type="button"
+          className="absolute top-0 right-0 bg-(--bg-color) text-(--text-color) rounded-full w-6 h-6 hover:brightness-90"
+        >
+          <i
+            title="Close"
+            onClick={closePreferences}
+            className="fa-solid fa-xmark"
+          ></i>
+        </button>
+
+        <h2 className="text-3xl font-bold flex items-center justify-center gap-2 mb-3">
+          <i className="fa-solid fa-palette"></i> Preferences
+        </h2>
+        <div className="flex items-center gap-2 text-lg">
+          <p>Choose a custom color: </p>
+          <input
+            type="color"
+            name="color"
+            id="color"
+            defaultValue={customColor}
+            onChange={(e) => toggleCustomColor(e)}
+            className="w-32 h-8 hover:scale-105"
+          />
+        </div>
+      </dialog>
     </header>
   );
 };

@@ -37,6 +37,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 img {
   max-width: 100%;
@@ -66,6 +67,7 @@ summary::marker {
   position: relative;
 }
 .floating-label-effect input,
+.floating-label-effect textarea,
 .floating-label-effect select,
 .floating-label-effect details {
   border: 2px solid var(--color-gray-400);
@@ -77,16 +79,19 @@ summary::marker {
   color: var(--text-color);
 }
 .floating-label-effect input:hover,
+.floating-label-effect textarea:hover,
 .floating-label-effect select:hover,
 .floating-label-effect details:hover {
   border-color: var(--text-color);
 }
 .floating-label-effect input:focus,
+.floating-label-effect textarea:focus,
 .floating-label-effect select:focus,
 .floating-label-effect details[open] {
   border-color: var(--primary-color);
 }
 .floating-label-effect input + label,
+.floating-label-effect textarea + label,
 .floating-label-effect select + label,
 .floating-label-effect details + label {
   position: absolute;
@@ -95,8 +100,13 @@ summary::marker {
   transform: translateY(-50%);
   transition: 0.3s;
 }
+.floating-label-effect textarea + label {
+  top: 1rem;
+}
 .floating-label-effect input:focus + label,
 .floating-label-effect input:not(:placeholder-shown) + label,
+.floating-label-effect textarea:focus + label,
+.floating-label-effect textarea:not(:placeholder-shown) + label,
 .floating-label-effect select:focus + label,
 .floating-label-effect select:not([value=""]) + label,
 .floating-label-effect details[open] + label,

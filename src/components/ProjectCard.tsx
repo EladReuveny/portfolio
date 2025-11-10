@@ -7,7 +7,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ project, index }: ProjectCardProps) => {
   return (
-    <div className="relative group py-5 px-10 text-center bg-(--text-color)/10 rounded-md shadow-2xl">
+    <div className="relative group py-6 px-2 text-center bg-(--text-color)/10 rounded-lg shadow-2xl">
       <span className="absolute top-2 right-2 text-sm text-gray-500">
         #{index + 1}
       </span>
@@ -49,7 +49,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         )}
       </div>
 
-      <div className="absolute w-full h-0 opacity-0 bottom-0 left-0 rounded-md bg-(--primary-color)/80 text-(--bg-color) flex items-center justify-center gap-6 group-hover:h-full group-hover:opacity-100">
+      <div className="absolute w-full h-0 opacity-0 bottom-0 left-0 rounded-lg bg-(--primary-color)/80 text-(--bg-color) flex items-center justify-center gap-6 group-hover:h-full group-hover:opacity-100">
         {project.sourceCode.backend && (
           <a
             href={project.sourceCode.backend}

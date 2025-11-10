@@ -86,7 +86,7 @@ const Services = ({}: ServicesProps) => {
       </header>
 
       <main className="mt-5">
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(500px,1fr))] gap-5">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5">
           {services.map((service, i) => (
             <ServiceCard key={i} service={service} />
           ))}

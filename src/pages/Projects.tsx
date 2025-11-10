@@ -7,7 +7,7 @@ const Projects = ({}: ProjectsProps) => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Football Manager API",
+      title: "Football API Manager",
       description:
         "A full-stack web application that enables users to manage and visualize football team and player data through a secure JWT-based authentication system, RESTful API, and interactive interface.",
       technologies: {
@@ -160,7 +160,7 @@ const Projects = ({}: ProjectsProps) => {
     {
       id: 3,
       title: "Assembly Project",
-      description: "Converts assembly code to machine code using C.",
+      description: "Converts assembly code to machine code using C language.",
       technologies: {
         backend: [
           {
@@ -263,7 +263,7 @@ const Projects = ({}: ProjectsProps) => {
       </header>
 
       <main className="mt-5">
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(450px,1fr))] gap-5">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}

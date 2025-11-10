@@ -33,7 +33,7 @@ const Home = ({}: HomeProps) => {
         </h2>
       </header>
 
-      <main className="text-justify">
+      <main className="text-center">
         <div className="space-y-3">
           <p className="text-gray-400">
             I'm a dedicated <b>Full Stack Developer</b> and{" "}
@@ -84,19 +84,19 @@ const Home = ({}: HomeProps) => {
           </a>
         </div>
 
-        <div className="flex justify-center gap-5 mt-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-10">
           <Link
             to={"/about"}
-            className="relative group flex items-center gap-1 py-4 px-16 text-xl bg-(--primary-color) text-(--bg-color) rounded-full shadow-[0_0_25px_0px_var(--primary-color)] hover:shadow-[0_0_25px_10px_var(--primary-color)] hover:scale-105"
+            className="relative group flex items-center justify-center gap-2 py-4 px-16 text-xl border-2 border-(--primary-color) bg-(--primary-color) text-(--bg-color) rounded-full shadow-[0_0_25px_0px_var(--primary-color)] hover:shadow-[0_0_25px_10px_var(--primary-color)] hover:scale-105"
           >
             About <SliddingDashArrowIcon />
           </Link>
           <Link
             to={"/contact"}
-            className="py-4 px-16 text-xl border-2 border-(--primary-color) text-(--primary-color) rounded-full shadow-[0_0_25px_0px_var(--primary-color)] hover:shadow-[0_0_25px_10px_var(--primary-color)] hover:scale-105"
+            className="flex items-center justify-center gap-2 py-4 px-16 text-xl border-2 border-(--primary-color) text-(--primary-color) rounded-full shadow-[0_0_25px_0px_var(--primary-color)] hover:shadow-[0_0_25px_10px_var(--primary-color)] hover:scale-105"
           >
             Contact
-            <i className="fa-solid fa-paper-plane ml-2 animate-bounce"></i>
+            <i className="fa-solid fa-paper-plane animate-bounce"></i>
           </Link>
         </div>
       </main>
