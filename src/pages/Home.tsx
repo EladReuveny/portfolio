@@ -46,15 +46,15 @@ const Home = ({}: HomeProps) => {
             backend, integrated with <b>React</b>, <b>TypeScript</b>, and{" "}
             <b>Tailwind CSS</b> on the frontend. For data management and
             environment consistency, I use <b>PostgreSQL</b> along with{" "}
-            <b>Docker</b> for containerization and deployment. Development and
-            collaboration are supported by <b>Git & GitHub</b> for version
-            control, <b>Postman</b> for API testing, and <b>Swagger</b> for
-            comprehensive API documentation. My deployment workflow includes{" "}
-            <b>Netlify</b> for frontend delivery, <b>Render</b> for backend
-            hosting, and <b>Neon</b> for cloud storage. I also work with{" "}
-            <b>AWS</b> services such as <b>S3</b>, <b>CloudFront</b>,{" "}
-            <b>Route 53</b>, and container-based deployments using <b>ECS</b>{" "}
-            and <b>ECR</b>.
+            <b>Redis</b> for caching and fast data access, and <b>Docker</b> for
+            containerization and deployment. Development and collaboration are
+            supported by <b>Git & GitHub</b> for version control, <b>Postman</b>{" "}
+            for API testing, and <b>Swagger</b> for comprehensive API
+            documentation. My deployment workflow includes <b>Netlify</b> for
+            frontend delivery, <b>Render</b> for backend hosting, and{" "}
+            <b>Neon</b> for cloud storage. I also work with <b>AWS</b> services
+            such as <b>S3</b>, <b>CloudFront</b>, <b>Route 53</b>, and
+            container-based deployments using <b>ECS</b> and <b>ECR</b>.
           </p>
           <p className="text-gray-400">
             Skilled in RESTful API design, database management, responsive

@@ -71,6 +71,16 @@ const Projects = ({}: ProjectsProps) => {
             ),
           },
           {
+            name: "Redis",
+            logo: (
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg"
+                alt="Redis"
+                className="w-12 h-12"
+              />
+            ),
+          },
+          {
             name: "Docker",
             logo: (
               <img
@@ -183,8 +193,7 @@ const Projects = ({}: ProjectsProps) => {
     {
       id: 4,
       title: "Pokémon Search App",
-      description:
-        "Search Pokémons and their evolutions by ID or name. Built with React and Vite. Deployed on Netlify.",
+      description: "Search Pokémons and their evolutions by ID or name.",
       technologies: {
         frontend: [
           {
@@ -208,7 +217,8 @@ const Projects = ({}: ProjectsProps) => {
     {
       id: 5,
       title: "TicTacToe",
-      description: "TicTacToe game using React and Vite. Deployed on Netlify.",
+      description:
+        "TicTacToe game supports both singleplayer (against A.I.) and multiplayer modes.",
       technologies: {
         frontend: [
           {

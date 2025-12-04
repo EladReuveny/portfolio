@@ -4,7 +4,7 @@
 :root {
   --bg-color: hsl(220, 10%, 5%);
   --text-color: hsl(0, 0%, 100%);
-  --primary-color: hsl(201, 68%, 61%);
+  --primary-color: hsl(261, 100%, 61%);
 }
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
