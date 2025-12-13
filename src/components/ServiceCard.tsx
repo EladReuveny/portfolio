@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import type { JSX } from "react";
 
 export type Service = {
@@ -13,7 +14,13 @@ type ServiceCardProps = {
 
 const ServiceCard = ({ service }: ServiceCardProps) => {
   return (
-    <div className="py-6 px-4 bg-(--primary-color) text-(--bg-color) text-center rounded-xl shadow-2xl border-2 border-(--primary-color) hover:bg-(--bg-color) hover:text-(--primary-color)">
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: -20 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      className="py-6 px-4 bg-(--primary-color) text-(--bg-color) text-center rounded-xl shadow-2xl border-2 border-(--primary-color) hover:bg-(--bg-color) hover:text-(--primary-color)"
+    >
       {service.img}
       <h2 className="text-2xl font-bold my-2">{service.title}</h2>
       <p className="mb-3">{service.description}</p>
@@ -25,7 +32,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 };
 

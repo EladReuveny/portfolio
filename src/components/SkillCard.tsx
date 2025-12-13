@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { type JSX } from "react";
 
 export type Skill = {
@@ -14,7 +15,13 @@ type SkillCardProps = {
 
 const SkillCard = ({ title, icon, skills }: SkillCardProps) => {
   return (
-    <div className="pt-3 pb-10 px-4 bg-(--primary-color)/25 border-l-4 border-(--primary-color) hover:backdrop-brightness-200">
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, x: -20 },
+        visible: { opacity: 1, x: 0 },
+      }}
+      className="pt-3 pb-10 px-4 bg-(--primary-color)/25 border-l-4 border-(--primary-color) hover:backdrop-brightness-200"
+    >
       <h2 className="text-3xl font-bold text-(--primary-color) flex items-center justify-center gap-4 mb-5">
         {icon}
         {title}
@@ -33,7 +40,7 @@ const SkillCard = ({ title, icon, skills }: SkillCardProps) => {
           </a>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

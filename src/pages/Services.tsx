@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import ServiceCard, { type Service } from "../components/ServiceCard";
 
 type ServicesProps = {};
@@ -79,7 +80,12 @@ const Services = ({}: ServicesProps) => {
   ];
 
   return (
-    <section className="mt-16 px-2">
+    <motion.section
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="mt-16 px-2"
+    >
       <header>
         <h1 className="text-4xl font-bold text-center py-2 border-y-2 border-(--primary-color)">
           <i className="fa-solid fa-folder-open mr-2"></i> Services
@@ -87,13 +93,27 @@ const Services = ({}: ServicesProps) => {
       </header>
 
       <main className="mt-5">
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                delayChildren: 0.4,
+                staggerChildren: 0.8,
+              },
+            },
+          }}
+          className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5"
+        >
           {services.map((service, i) => (
             <ServiceCard key={i} service={service} />
           ))}
-        </div>
+        </motion.div>
       </main>
-    </section>
+    </motion.section>
   );
 };
 

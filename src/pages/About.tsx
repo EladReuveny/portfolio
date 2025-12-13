@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import resume from "../assets/resume.pdf";
 import type { Skill } from "../components/SkillCard";
@@ -100,6 +101,17 @@ const About = ({}: AboutProps) => {
       ),
     },
     {
+      name: "TypeScript",
+      url: "https://www.typescriptlang.org/",
+      logo: (
+        <img
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+          alt="TypeScript"
+          className="w-12 h-12"
+        />
+      ),
+    },
+    {
       name: "Tailwind CSS",
       url: "https://tailwindcss.com/",
       logo: (
@@ -187,7 +199,7 @@ const About = ({}: AboutProps) => {
     },
   ];
 
-  const databasesAndApis: Skill[] = [
+  const databaseAndCaching: Skill[] = [
     {
       name: "PostgreSQL",
       url: "https://www.postgresql.org",
@@ -222,30 +234,19 @@ const About = ({}: AboutProps) => {
       ),
     },
     {
-      name: "Postman",
-      url: "https://postman.com",
+      name: "Neon",
+      url: "https://neon.tech/",
       logo: (
         <img
-          src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
-          alt="Postman"
-          className="w-12 h-12"
-        />
-      ),
-    },
-    {
-      name: "Swagger",
-      url: "https://swagger.io",
-      logo: (
-        <img
-          src="https://svgstack.com/media/img/swagger-logo-xTUe014050.webp"
-          alt="Swagger"
+          src="https://neon.tech/favicon.ico"
+          alt="Neon"
           className="w-12 h-12"
         />
       ),
     },
   ];
 
-  const devOpsAndDeployment: Skill[] = [
+  const devOpsAndCloud: Skill[] = [
     {
       name: "Git",
       url: "https://git-scm.com/",
@@ -275,6 +276,17 @@ const About = ({}: AboutProps) => {
         <img
           src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg"
           alt="Docker"
+          className="w-12 h-12"
+        />
+      ),
+    },
+    {
+      name: "AWS",
+      url: "https://aws.amazon.com/",
+      logo: (
+        <img
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+          alt="AWS"
           className="w-12 h-12"
         />
       ),
@@ -311,31 +323,31 @@ const About = ({}: AboutProps) => {
         </svg>
       ),
     },
-    {
-      name: "Neon",
-      url: "https://neon.tech/",
-      logo: (
-        <img
-          src="https://neon.tech/favicon.ico"
-          alt="Neon"
-          className="w-12 h-12"
-        />
-      ),
-    },
-    {
-      name: "AWS",
-      url: "https://aws.amazon.com/",
-      logo: (
-        <img
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
-          alt="AWS"
-          className="w-12 h-12"
-        />
-      ),
-    },
   ];
 
-  const security: Skill[] = [
+  const apiDesignAndSecurity: Skill[] = [
+    {
+      name: "Postman",
+      url: "https://postman.com",
+      logo: (
+        <img
+          src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+          alt="Postman"
+          className="w-12 h-12"
+        />
+      ),
+    },
+    {
+      name: "Swagger",
+      url: "https://swagger.io",
+      logo: (
+        <img
+          src="https://svgstack.com/media/img/swagger-logo-xTUe014050.webp"
+          alt="Swagger"
+          className="w-12 h-12"
+        />
+      ),
+    },
     {
       name: "JWT",
       url: "https://jwt.io/",
@@ -349,7 +361,7 @@ const About = ({}: AboutProps) => {
     },
   ];
 
-  const toolsAndEnvironment: Skill[] = [
+  const buildAndDevTools: Skill[] = [
     {
       name: "Vite",
       url: "https://vitejs.dev/",
@@ -384,6 +396,17 @@ const About = ({}: AboutProps) => {
       ),
     },
     {
+      name: "Linux",
+      url: "https://www.linux.org/",
+      logo: (
+        <img
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
+          alt="Linux"
+          className="w-12 h-12"
+        />
+      ),
+    },
+    {
       name: "VS Code",
       url: "https://code.visualstudio.com/",
       logo: (
@@ -406,17 +429,6 @@ const About = ({}: AboutProps) => {
       ),
     },
     {
-      name: "Linux",
-      url: "https://www.linux.org/",
-      logo: (
-        <img
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
-          alt="Linux"
-          className="w-12 h-12"
-        />
-      ),
-    },
-    {
       name: "Figma",
       url: "https://www.figma.com/",
       logo: (
@@ -430,7 +442,12 @@ const About = ({}: AboutProps) => {
   ];
 
   return (
-    <section className="mt-16 px-2">
+    <motion.section
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="mt-16 px-2"
+    >
       <header>
         <h1 className="text-4xl font-bold text-center py-2 border-y-2 border-(--primary-color)">
           <i className="fa-solid fa-address-card mr-2"></i> About{" "}
@@ -451,7 +468,21 @@ const About = ({}: AboutProps) => {
           technologies.
         </p>
 
-        <div className="flex flex-col gap-4 mt-5">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                delayChildren: 0.4,
+                staggerChildren: 0.8,
+              },
+            },
+          }}
+          className="flex flex-col gap-4 mt-5"
+        >
           <SkillCard
             title="Programming Languages"
             icon={<i className="material-symbols-outlined text-4xl!">code</i>}
@@ -471,30 +502,29 @@ const About = ({}: AboutProps) => {
           />
 
           <SkillCard
-            title="Databases & APIs"
+            title="Database & Caching"
             icon={<i className="fa-solid fa-database"></i>}
-            skills={databasesAndApis}
+            skills={databaseAndCaching}
           />
 
           <SkillCard
-            title="DevOps &
-              Deployment"
+            title="DevOps & Cloud"
             icon={<i className="fa-solid fa-cloud-arrow-up"></i>}
-            skills={devOpsAndDeployment}
+            skills={devOpsAndCloud}
           />
 
           <SkillCard
-            title="Security"
+            title="API Design & Security"
             icon={<i className="fa-solid fa-shield"></i>}
-            skills={security}
+            skills={apiDesignAndSecurity}
           />
 
           <SkillCard
-            title="Tools & Environment"
+            title="Build & Development Tools"
             icon={<i className="fa-solid fa-wrench"></i>}
-            skills={toolsAndEnvironment}
+            skills={buildAndDevTools}
           />
-        </div>
+        </motion.div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-10">
           <Link
@@ -511,11 +541,12 @@ const About = ({}: AboutProps) => {
             download
             className="flex items-center justify-center gap-2 py-4 px-16 text-xl border-2 border-(--primary-color) text-(--primary-color) rounded-full shadow-[0_0_25px_0px_var(--primary-color)] hover:shadow-[0_0_25px_10px_var(--primary-color)] hover:scale-105"
           >
-            View CV <i className="fa fa-download"></i>
+            View CV{" "}
+            <i className="fa fa-download animate-[bounce_2s_linear_infinite]"></i>
           </a>
         </div>
       </main>
-    </section>
+    </motion.section>
   );
 };
 

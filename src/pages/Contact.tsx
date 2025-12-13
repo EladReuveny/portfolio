@@ -1,3 +1,5 @@
+import { motion } from "motion/react";
+
 type ContactProps = {};
 
 const Contact = ({}: ContactProps) => {
@@ -32,7 +34,12 @@ const Contact = ({}: ContactProps) => {
   };
 
   return (
-    <section className="mt-16 px-2">
+    <motion.section
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="mt-16 px-2"
+    >
       <header>
         <h1 className="text-4xl font-bold text-center py-2 border-y-2 border-(--primary-color)">
           <i className="fa-solid fa-envelope mr-2"></i> Contact
@@ -98,11 +105,11 @@ const Contact = ({}: ContactProps) => {
             className="mt-2 flex items-center justify-center gap-2 py-4 px-16 text-xl border-2 border-(--primary-color) bg-(--primary-color) text-(--bg-color) rounded-full shadow-[0_0_25px_0px_var(--primary-color)] hover:shadow-[0_0_25px_10px_var(--primary-color)] hover:scale-105"
           >
             Let's Talk{" "}
-            <i className="fa-solid fa-paper-plane animate-bounce"></i>
+            <i className="fa-solid fa-paper-plane animate-[bounce_2s_linear_infinite]"></i>
           </button>
         </form>
       </main>
-    </section>
+    </motion.section>
   );
 };
 

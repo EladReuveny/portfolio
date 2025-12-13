@@ -1,7 +1,9 @@
+import { motion } from "motion/react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Typed from "typed.js";
 import SliddingDashArrowIcon from "../components/SliddingDashArrowIcon";
+import SocialLinks from "../components/SocialLinks";
 
 type HomeProps = {};
 
@@ -21,7 +23,12 @@ const Home = ({}: HomeProps) => {
   }, []);
 
   return (
-    <section className="mt-16 px-2">
+    <motion.section
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="mt-16 px-2"
+    >
       <header className="font-bold text-center mb-5">
         {" "}
         <h1 className="text-4xl font-bold">
@@ -42,8 +49,8 @@ const Home = ({}: HomeProps) => {
             development, and exploring new technologies.
           </p>
           <p className="text-gray-400">
-            I primarily work with <b>NestJS</b> or <b>Spring Boot</b> on the
-            backend, integrated with <b>React</b>, <b>TypeScript</b>, and{" "}
+            I primarily work with <b>NestJS </b>(primary) or <b>Spring Boot</b>{" "}
+            on the backend, integrated with <b>React</b>, <b>TypeScript</b>, and{" "}
             <b>Tailwind CSS</b> on the frontend. For data management and
             environment consistency, I use <b>PostgreSQL</b> along with{" "}
             <b>Redis</b> for caching and fast data access, and <b>Docker</b> for
@@ -67,24 +74,8 @@ const Home = ({}: HomeProps) => {
           </p>
         </div>
 
-        <div className="flex justify-center items-center gap-3 mb-3 text-(--primary-color) mt-8">
-          <a
-            href="https://github.com/EladReuveny"
-            target="_blank"
-            title="GitHub Profile"
-            className="flex items-center justify-center w-14 h-14 border-2 border-(--primary-color) rounded-full text-3xl hover:text-(--bg-color) hover:bg-(--primary-color) hover:-translate-y-1 hover:shadow-[0_0_25px_0px_var(--primary-color)]"
-          >
-            <i className="fa-brands fa-github"></i>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/eladreuveny/"
-            target="_blank"
-            title="LinkedIn Profile"
-            className="flex items-center justify-center w-14 h-14 border-2 border-(--primary-color) rounded-full text-3xl hover:text-(--bg-color) hover:bg-(--primary-color) hover:-translate-y-1 hover:shadow-[0_0_25px_0px_var(--primary-color)]"
-          >
-            <i className="fa-brands fa-linkedin"></i>
-          </a>
+        <div className="mt-8">
+          <SocialLinks />
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mt-10">
@@ -99,11 +90,11 @@ const Home = ({}: HomeProps) => {
             className="flex items-center justify-center gap-2 py-4 px-16 text-xl border-2 border-(--primary-color) text-(--primary-color) rounded-full shadow-[0_0_25px_0px_var(--primary-color)] hover:shadow-[0_0_25px_10px_var(--primary-color)] hover:scale-105"
           >
             Contact
-            <i className="fa-solid fa-paper-plane animate-bounce"></i>
+            <i className="fa-solid fa-paper-plane animate-[bounce_2s_linear_infinite]"></i>
           </Link>
         </div>
       </main>
-    </section>
+    </motion.section>
   );
 };
 

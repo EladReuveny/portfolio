@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import type { Project } from "../types/Project";
 
 type ProjectCardProps = {
@@ -7,7 +8,13 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ project, index }: ProjectCardProps) => {
   return (
-    <div className="relative group py-6 px-2 text-center bg-(--text-color)/10 rounded-lg shadow-2xl">
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: -20 },
+        visible: { opacity: 1, y: 0 },
+      }}
+      className="relative group py-6 px-2 text-center bg-(--text-color)/10 rounded-lg shadow-2xl"
+    >
       <span className="absolute top-2 right-2 text-sm text-gray-500">
         #{index + 1}
       </span>
@@ -81,7 +88,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           </a>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
