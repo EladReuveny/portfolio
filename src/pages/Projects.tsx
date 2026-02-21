@@ -8,6 +8,92 @@ const Projects = ({}: ProjectsProps) => {
   const projects: Project[] = [
     {
       id: 1,
+      title: "Intellectify — Full Stack Social Media Platform",
+      description:
+        "Intellectify is a scalable full-stack knowledge-sharing platform built using a microservices architecture, enabling users to read, write, and explore knowledge across various topics.",
+      technologies: {
+        frontend: [
+          {
+            name: "React",
+            logo: (
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                alt="React"
+                className="w-12 h-12"
+              />
+            ),
+          },
+          {
+            name: "TypeScript",
+            logo: (
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+                alt="TypeScript"
+                className="w-12 h-12"
+              />
+            ),
+          },
+          {
+            name: "Tailwind CSS",
+            logo: (
+              <img
+                src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+                alt="Tailwind CSS"
+                className="w-12 h-12"
+              />
+            ),
+          },
+        ],
+        backend: [
+          {
+            name: "NestJS",
+            logo: (
+              <img
+                src="https://nestjs.com/img/logo-small.svg"
+                alt="NestJS"
+                className="w-12 h-12"
+              />
+            ),
+          },
+          {
+            name: "PostgreSQL",
+            logo: (
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
+                alt="PostgreSQL"
+                className="w-12 h-12"
+              />
+            ),
+          },
+          {
+            name: "Docker",
+            logo: (
+              <img
+                src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg"
+                alt="Docker"
+                className="w-12 h-12"
+              />
+            ),
+          },
+          {
+            name: "JWT",
+            logo: (
+              <img
+                src="https://cdn.worldvectorlogo.com/logos/jwt-3.svg"
+                alt="JWT"
+                className="w-12 h-12"
+              />
+            ),
+          },
+        ],
+      },
+      sourceCode: {
+        frontend: "https://github.com/EladReuveny/intellectify",
+        backend: "https://github.com/EladReuveny/intellectify",
+      },
+    },
+    {
+      id: 2,
       title: "Football API Manager",
       description:
         "A full-stack web application that enables users to manage and visualize football team and player data through a secure JWT-based authentication system, RESTful API, and interactive interface.",
@@ -111,7 +197,7 @@ const Projects = ({}: ProjectsProps) => {
     },
 
     {
-      id: 2,
+      id: 3,
       title: "Electronics - E-Commerce Platform",
       description:
         "A full-stack e-commerce platform that allows users to browse, purchase, and manage electronic products with authentication, order tracking, and an optimized shopping experience.",
@@ -169,7 +255,7 @@ const Projects = ({}: ProjectsProps) => {
     },
 
     {
-      id: 3,
+      id: 4,
       title: "Assembly Project",
       description: "Converts assembly code to machine code using C language.",
       technologies: {
@@ -192,7 +278,7 @@ const Projects = ({}: ProjectsProps) => {
     },
 
     {
-      id: 4,
+      id: 5,
       title: "Pokémon Search App",
       description: "Search Pokémons and their evolutions by ID or name.",
       technologies: {
@@ -216,7 +302,7 @@ const Projects = ({}: ProjectsProps) => {
     },
 
     {
-      id: 5,
+      id: 6,
       title: "TicTacToe",
       description:
         "TicTacToe game supports both singleplayer (against A.I.) and multiplayer modes.",
@@ -241,7 +327,7 @@ const Projects = ({}: ProjectsProps) => {
     },
 
     {
-      id: 6,
+      id: 7,
       title: "Restaurant Menu Manager",
       description:
         "Manage and interact with a restaurant menu using Java and JavaFX.",
@@ -292,7 +378,7 @@ const Projects = ({}: ProjectsProps) => {
               },
             },
           }}
-          className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
