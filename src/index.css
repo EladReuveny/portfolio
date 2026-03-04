@@ -70,7 +70,7 @@ summary::marker {
 .floating-label-effect textarea,
 .floating-label-effect select,
 .floating-label-effect details {
-  border: 2px solid var(--color-gray-400);
+  border: 2px solid hsl(from var(--text-color) h s l / 0.6);
   border-radius: 0.25rem;
   padding-block: 0.5rem;
   padding-inline: 0.75rem;

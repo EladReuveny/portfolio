@@ -15,13 +15,13 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       }}
       className="relative group py-6 px-2 text-center bg-(--text-color)/10 rounded-lg shadow-2xl"
     >
-      <span className="absolute top-2 right-2 text-sm text-gray-500">
+      <span className="absolute top-2 right-2 text-sm text-">
         #{index + 1}
       </span>
       <h2 className="font-bold text-2xl text-(--primary-color)">
         {project.title}
       </h2>
-      <p className="text-gray-400">{project.description}</p>
+      <p className="text-(--text-color)/60">{project.description}</p>
       <div className="space-y-4 mt-2">
         {project.technologies.frontend && (
           <div className="flex flex-col items-center gap-1">

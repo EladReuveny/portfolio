@@ -34,6 +34,16 @@ const Projects = ({}: ProjectsProps) => {
             ),
           },
           {
+            name: "TanStack Query",
+            logo: (
+              <img
+                src="https://raw.githubusercontent.com/bestofjs/bestofjs/master/apps/web/public/logos/react-query.svg"
+                alt="TanStack Query"
+                className="w-12 h-12"
+              />
+            ),
+          },
+          {
             name: "Tailwind CSS",
             logo: (
               <img

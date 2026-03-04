@@ -42,35 +42,45 @@ const Home = ({}: HomeProps) => {
 
       <main className="text-center">
         <div className="space-y-3">
-          <p className="text-gray-400">
-            I'm a dedicated <b>Full Stack Developer</b> &{" "}
-            <b>Software Engineer</b> with a B.Sc. in Computer Science from The
-            Open University of Israel. Passionate about problem-solving, web
-            development, and exploring new technologies.
+          <p className="text-(--text-color)/60">
+            I'm a dedicated <strong>Full Stack Developer</strong> &{" "}
+            <strong>Software Engineer</strong> with a B.Sc. in Computer Science
+            from The Open University of Israel. Passionate about
+            problem-solving, web development, and exploring new technologies.
           </p>
-          <p className="text-gray-400">
-            I primarily work with <b>NestJS </b>(primary) or <b>Spring Boot</b>{" "}
-            on the backend, integrated with <b>React</b>, <b>TypeScript</b>, and{" "}
-            <b>Tailwind CSS</b> on the frontend. For data management and
-            environment consistency, I use <b>PostgreSQL</b> along with{" "}
-            <b>Redis</b> for caching and fast data access, and <b>Docker</b> for
+          <p className="text-(--text-color)/60">
+            I primarily work with <strong>NestJS </strong>(primary) or{" "}
+            <strong>Spring Boot</strong> on the backend, integrated with{" "}
+            <strong>React</strong>, <strong>TypeScript</strong>, and{" "}
+            <strong>Tailwind CSS</strong> on the frontend. I leverage{" "}
+            <strong>TanStack Query</strong> for server state management,{" "}
+            <strong>TanStack Form</strong> with <strong>Zod</strong> for robust
+            form state management and schema validation, and{" "}
+            <strong>Jotai</strong> for client state management. For data
+            management and environment consistency, I use{" "}
+            <strong>PostgreSQL</strong> along with <strong>Redis</strong> for
+            caching and fast data access, and <strong>Docker</strong> for
             containerization and deployment. Development and collaboration are
-            supported by <b>Git & GitHub</b> for version control, <b>Postman</b>{" "}
-            for API testing, and <b>Swagger</b> for comprehensive API
-            documentation. My deployment workflow includes <b>Netlify</b> for
-            frontend delivery, <b>Render</b> for backend hosting, and{" "}
-            <b>Neon</b> for cloud storage. I also work with <b>AWS</b> services
-            such as <b>S3</b>, <b>CloudFront</b>, <b>Route 53</b>, and
-            container-based deployments using <b>ECS</b> and <b>ECR</b>.
+            supported by <strong>Git & GitHub</strong> for version control,{" "}
+            <strong>Postman</strong> for API testing, and{" "}
+            <strong>Swagger</strong> for comprehensive API documentation. My
+            deployment workflow includes <strong>Netlify</strong> for frontend
+            delivery, <strong>Render</strong> for backend hosting, and{" "}
+            <strong>Neon</strong> for cloud storage. I also work with{" "}
+            <strong>AWS</strong> services such as <strong>S3</strong>,{" "}
+            <strong>CloudFront</strong>, <strong>Route 53</strong>, and
+            container-based deployments using <strong>ECS</strong> and{" "}
+            <strong>ECR</strong>.
           </p>
-          <p className="text-gray-400">
-            Skilled in RESTful API design, database management, responsive
-            UI/UX, and deploying applications on modern cloud platforms.
-            Familiar with microservices architecture (HTTP and message-broker
-            patterns), caching with Redis, and CI/CD fundamentals. A fast,
-            self-driven learner with strong problem-solving skills, effective
-            independently or in teams, and passionate about delivering
-            high-quality, user-focused solutions.
+          <p className="text-(--text-color)/60">
+            Strong foundation in RESTful API design, microservices architecture
+            (synchronous and message-driven communication), caching strategies,
+            and database management, responsive UI/UX, and deploying apps on
+            modern cloud platforms. Familiar with CI/CD pipelines and automated
+            deployment workflows. A fast, self-driven learner with strong
+            problem-solving skills, highly effective independently or in teams,
+            and passionate about delivering high-quality, user-focused
+            solutions.
           </p>
         </div>
 

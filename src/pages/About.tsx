@@ -112,6 +112,17 @@ const About = ({}: AboutProps) => {
       ),
     },
     {
+      name: "TanStack Query",
+      url: "https://tanstack.com/query/latest",
+      logo: (
+        <img
+          src="https://raw.githubusercontent.com/bestofjs/bestofjs/master/apps/web/public/logos/react-query.svg"
+          alt="TanStack Query"
+          className="w-12 h-12"
+        />
+      ),
+    },
+    {
       name: "Tailwind CSS",
       url: "https://tailwindcss.com/",
       logo: (
@@ -140,6 +151,17 @@ const About = ({}: AboutProps) => {
         <img
           src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
           alt="CSS3"
+          className="w-12 h-12"
+        />
+      ),
+    },
+    {
+      name: "Vite",
+      url: "https://vitejs.dev/",
+      logo: (
+        <img
+          src="https://vitejs.dev/logo.svg"
+          alt="Vite"
           className="w-12 h-12"
         />
       ),
@@ -199,7 +221,7 @@ const About = ({}: AboutProps) => {
     },
   ];
 
-  const databaseAndCaching: Skill[] = [
+  const databasesAndCaching: Skill[] = [
     {
       name: "PostgreSQL",
       url: "https://www.postgresql.org",
@@ -229,17 +251,6 @@ const About = ({}: AboutProps) => {
         <img
           src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original-wordmark.svg"
           alt="Redis"
-          className="w-12 h-12"
-        />
-      ),
-    },
-    {
-      name: "Neon",
-      url: "https://neon.tech/",
-      logo: (
-        <img
-          src="https://neon.tech/favicon.ico"
-          alt="Neon"
           className="w-12 h-12"
         />
       ),
@@ -323,20 +334,20 @@ const About = ({}: AboutProps) => {
         </svg>
       ),
     },
-  ];
-
-  const apiDesignAndSecurity: Skill[] = [
     {
-      name: "Postman",
-      url: "https://postman.com",
+      name: "Neon",
+      url: "https://neon.tech/",
       logo: (
         <img
-          src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
-          alt="Postman"
+          src="https://neon.tech/favicon.ico"
+          alt="Neon"
           className="w-12 h-12"
         />
       ),
     },
+  ];
+
+  const apiDesignAndSecurity: Skill[] = [
     {
       name: "Swagger",
       url: "https://swagger.io",
@@ -344,6 +355,17 @@ const About = ({}: AboutProps) => {
         <img
           src="https://svgstack.com/media/img/swagger-logo-xTUe014050.webp"
           alt="Swagger"
+          className="w-12 h-12"
+        />
+      ),
+    },
+    {
+      name: "Postman",
+      url: "https://postman.com",
+      logo: (
+        <img
+          src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+          alt="Postman"
           className="w-12 h-12"
         />
       ),
@@ -361,18 +383,7 @@ const About = ({}: AboutProps) => {
     },
   ];
 
-  const buildAndDevTools: Skill[] = [
-    {
-      name: "Vite",
-      url: "https://vitejs.dev/",
-      logo: (
-        <img
-          src="https://vitejs.dev/logo.svg"
-          alt="Vite"
-          className="w-12 h-12"
-        />
-      ),
-    },
+  const toolsAndEnvironment: Skill[] = [
     {
       name: "npm",
       url: "https://www.npmjs.com/",
@@ -456,7 +467,7 @@ const About = ({}: AboutProps) => {
       </header>
 
       <main className="mt-5">
-        <p className="text-gray-400 text-center">
+        <p className="text-(--text-color)/60 text-center">
           I'm a dedicated Full Stack Developer/Software Engineer with a B.Sc. in
           Computer Science from The Open University of Israel. I have a
           versatile skill set, enabling me to contribute across both frontend
@@ -502,9 +513,9 @@ const About = ({}: AboutProps) => {
           />
 
           <SkillCard
-            title="Database & Caching"
+            title="Databases & Caching"
             icon={<i className="fa-solid fa-database"></i>}
-            skills={databaseAndCaching}
+            skills={databasesAndCaching}
           />
 
           <SkillCard
@@ -520,9 +531,9 @@ const About = ({}: AboutProps) => {
           />
 
           <SkillCard
-            title="Build & Development Tools"
+            title="Tools & Environment"
             icon={<i className="fa-solid fa-wrench"></i>}
-            skills={buildAndDevTools}
+            skills={toolsAndEnvironment}
           />
         </motion.div>
 

@@ -69,7 +69,7 @@ const Header = ({}: HeaderProps) => {
         <Logo />
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center gap-10 text-xl text-gray-400">
+        <ul className="hidden md:flex items-center gap-10 text-xl text-(--text-color)/60">
           {navLinks.map((link) => (
             <li key={link.path}>
               <NavLink
@@ -121,7 +121,7 @@ const Header = ({}: HeaderProps) => {
         {/* Mobile Navigation */}
         <ul
           className={`md:hidden fixed top-[60px] left-0 z-1 flex flex-col items-center gap-5 w-screen
-             text-2xl text-gray-400 bg-(--bg-color) overflow-y-auto py-4
+             text-2xl text-(--text-color)/60 bg-(--bg-color) overflow-y-auto py-4
             ${
               isMenuOpen ? "h-[calc(100vh-60px)] opacity-100" : "h-0 opacity-0"
             }`}
