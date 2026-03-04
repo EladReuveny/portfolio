@@ -59,7 +59,7 @@ const Services = ({}: ServicesProps) => {
         "API Testing & Documentation: Postman, Swagger",
         "UI Collaboration: Figma",
         "Development Tools: VS Code, IntelliJ IDEA",
-        "Operating Systems: Linux (Basic)",
+        "Operating Systems: Linux",
       ],
     },
 

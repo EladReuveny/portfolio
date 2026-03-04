@@ -4,7 +4,7 @@ type FooterProps = {};
 
 const Footer = ({}: FooterProps) => {
   return (
-    <footer className="text-center text-gray-400 bg-(--text-color)/10 py-5 mt-20">
+    <footer className="text-center text-(--text-color)/60 bg-(--text-color)/10 py-5 mt-20">
       <SocialLinks />
 
       <code>

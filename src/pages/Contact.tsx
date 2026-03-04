@@ -27,7 +27,7 @@ const Contact = ({}: ContactProps) => {
     `;
 
     const mailtoLink = `mailto:${myEmail}?subject=${encodeURIComponent(
-      subject
+      subject,
     )}&body=${encodeURIComponent(body)}`;
 
     window.open(mailtoLink, "_blank");
@@ -47,7 +47,7 @@ const Contact = ({}: ContactProps) => {
       </header>
 
       <main className="mt-5">
-        <p className="text-gray-400 text-center mb-4">
+        <p className="text-(--text-color)/60 text-center mb-4">
           If you'd like to discuss a project, or have a question, feel free to
           reach out!
         </p>

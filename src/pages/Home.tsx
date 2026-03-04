@@ -42,13 +42,13 @@ const Home = ({}: HomeProps) => {
 
       <main className="text-center">
         <div className="space-y-3">
-          <p className="text-gray-400">
+          <p className="text-(--text-color)/60">
             I'm a dedicated <b>Full Stack Developer</b> &{" "}
             <b>Software Engineer</b> with a B.Sc. in Computer Science from The
             Open University of Israel. Passionate about problem-solving, web
             development, and exploring new technologies.
           </p>
-          <p className="text-gray-400">
+          <p className="text-(--text-color)/60">
             I primarily work with <b>NestJS </b>(primary) or <b>Spring Boot</b>{" "}
             on the backend, integrated with <b>React</b>, <b>TypeScript</b>, and{" "}
             <b>Tailwind CSS</b> on the frontend. For data management and
@@ -63,14 +63,14 @@ const Home = ({}: HomeProps) => {
             such as <b>S3</b>, <b>CloudFront</b>, <b>Route 53</b>, and
             container-based deployments using <b>ECS</b> and <b>ECR</b>.
           </p>
-          <p className="text-gray-400">
-            Skilled in RESTful API design, database management, responsive
-            UI/UX, and deploying applications on modern cloud platforms.
-            Familiar with microservices architecture (HTTP and message-broker
-            patterns), caching with Redis, and CI/CD fundamentals. A fast,
-            self-driven learner with strong problem-solving skills, effective
-            independently or in teams, and passionate about delivering
-            high-quality, user-focused solutions.
+          <p className="text-(--text-color)/60">
+            Skilled in RESTful API design, microservices architecture (synchronous and
+            message-driven communication), caching strategies, and database
+            management, responsive UI/​UX, and deploying apps on modern cloud
+            platforms. Familiar with CI/​CD pipelines and automated deployment
+            workflows. A fast, self-driven learner with strong problem-solving
+            skills, highly effective independently or in teams, and passionate
+            about delivering high-quality, user-focused solutions.
           </p>
         </div>
 
