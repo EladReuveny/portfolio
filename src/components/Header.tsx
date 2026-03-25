@@ -20,7 +20,10 @@ const Header = ({}: HeaderProps) => {
     setIsMenuOpen(false);
   }, [location]);
 
-  const navLinks = [
+  const navLinks: {
+    path: string;
+    label: string;
+  }[] = [
     {
       path: "/about",
       label: "About",
@@ -70,8 +73,8 @@ const Header = ({}: HeaderProps) => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-10 text-xl text-(--text-color)/60">
-          {navLinks.map((link) => (
-            <li key={link.path}>
+          {navLinks.map((link, i) => (
+            <li key={`desktop-nav-link-${i}`}>
               <NavLink
                 to={link.path}
                 className={({ isActive }) =>
@@ -126,8 +129,8 @@ const Header = ({}: HeaderProps) => {
               isMenuOpen ? "h-[calc(100vh-60px)] opacity-100" : "h-0 opacity-0"
             }`}
         >
-          {navLinks.map((link) => (
-            <li key={link.path}>
+          {navLinks.map((link, i) => (
+            <li key={`mobile-nav-link-${i}`}>
               <NavLink
                 to={link.path}
                 className={({ isActive }) =>

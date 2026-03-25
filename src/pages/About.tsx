@@ -101,18 +101,7 @@ const About = ({}: AboutProps) => {
       ),
     },
     {
-      name: "TypeScript",
-      url: "https://www.typescriptlang.org/",
-      logo: (
-        <img
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-          alt="TypeScript"
-          className="w-12 h-12"
-        />
-      ),
-    },
-    {
-      name: "TanStack Query",
+      name: "React Query",
       url: "https://tanstack.com/query/latest",
       logo: (
         <img
@@ -126,11 +115,16 @@ const About = ({}: AboutProps) => {
       name: "Tailwind CSS",
       url: "https://tailwindcss.com/",
       logo: (
-        <img
-          src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
-          alt="Tailwind CSS"
-          className="w-12 h-12"
-        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 128 128"
+          className={`w-20 h-12 fill-(--text-color)`}
+        >
+          <path
+            d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
+            fill="#38bdf8"
+          />
+        </svg>
       ),
     },
     {
@@ -173,17 +167,11 @@ const About = ({}: AboutProps) => {
       name: "NestJS",
       url: "https://nestjs.com/",
       logo: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 128 128"
+        <img
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-original.svg"
+          alt="NestJS"
           className="w-12 h-12"
-        >
-          {" "}
-          <path
-            fill="#DF234F"
-            d="M75.4.3c-.9 0-1.8.2-2.6.5 1.7 1.1 2.6 2.6 3.1 4.3 0 .2.1.4.1.6 0 .2.1.4.1.6.1 2.9-.8 3.3-1.4 5-1 2.2-.7 4.6.5 6.5.1.2.2.5.4.7-1.3-8.4 5.7-9.6 7-12.2.1-2.3-1.8-3.8-3.3-4.9C77.8.5 76.6.3 75.4.3zm10.5 1.8c-.1.8 0 .6-.1 1 0 .3 0 .6-.1.9-.1.3-.1.5-.2.8-.1.3-.2.5-.3.8-.1.2-.2.4-.3.7-.1.1-.2.3-.3.4-.1.1-.1.2-.2.3-.2.2-.3.5-.5.7l-.6.6c-.2.2-.4.4-.6.5-.7.5-1.5.9-2.2 1.4-.2.2-.5.3-.7.5-.2.2-.4.3-.6.5l-.6.6c-.2.2-.4.4-.5.7-.2.2-.3.5-.5.7-.1.3-.2.5-.4.8-.1.3-.2.5-.3.8-.1.3-.2.6-.2.8 0 .1 0 .3-.1.4 0 .1 0 .3-.1.4v1.4c0 .3 0 .5.1.8 0 .3.1.5.2.8.1.3.2.5.3.8.1.2.2.3.2.5l-7.6-2.9c-1.3-.4-2.5-.7-3.8-1-.7-.2-1.4-.3-2.1-.5-2-.4-4-.7-6-.9h-.2c-2-.2-3.9-.3-5.9-.3-1.5 0-2.9.1-4.3.2-2 .1-4 .4-6 .7l-1.5.3c-1 .2-2 .4-3 .7-.5.1-1 .3-1.5.4-.5.2-1 .4-1.4.6-.4.2-.7.3-1.1.5-.1 0-.1 0-.2.1-.3.2-.6.3-.9.5-.1 0-.2.1-.2.1-.4.2-.7.4-1 .5-.2.1-.5.2-.7.3-.1.1-.2.1-.3.2-.3.2-.6.3-.9.5-.3.2-.6.3-.8.5-.2.2-.5.3-.7.5 0 0-.1 0-.1.1-.2.1-.4.3-.6.5l-.1.1c-.2.1-.3.3-.5.4-.1 0-.1.1-.2.1-.2.1-.3.3-.5.4 0 .1-.1.1-.1.1l-.6.6-.1.1-.6.6s0 .1-.1.1l-.5.5c-.1.1-.2.1-.2.2l-.6.6c0 .1-.1.1-.1.2l-.8.8-.1.1c-.5.6-1.1 1.1-1.7 1.6-.6.5-1.2 1-1.9 1.5s-1.3.9-2 1.3-1.4.7-2.1 1c-.7.3-1.4.6-2.1.8-1.4.3-2.8.9-4 1 0-.5-.3-.4-.6-.4-.3.1-.6.1-.8.2-.3.1-.5.2-.8.3-.3.1-.5.2-.8.4-.2.2-.5.3-.7.5-.2.2-.5.4-.7.6-.2.2-.5.4-.7.6-.2.2-.4.4-.6.7-.2.3-.4.5-.5.8-.2.2-.3.5-.5.8-.1.3-.3.6-.4.9l-.3.9c-.1.3-.1.5-.2.8v.1c-.1.3-.1.7-.1.9.1-.1.1.1.1.3v.4c0 .2.1.4.1.6.1.2.1.4.2.6.1.2.2.4.4.6.1.2.3.4.4.6.2.2.4.4.6.5.2.2.4.4.6.5.8.7 1 .9 2 1.5.2.1.3.2.5.3h.1v.2c0 .3.1.5.2.8.1.3.2.6.3.8l.3.6c0 .1.1.1.1.2.1.3.3.5.4.7.2.2.3.5.5.7l.6.6.6.6H8c.2.2.4.3.6.5.2.2.5.3.7.4.2.1.5.3.8.4.2.1.4.2.7.2 0 0 .1 0 .1.1.1 0 .3.1.4.1-.1 1.8-.1 3.5.1 4.1.3.7 1.8-1.4 3.2-3.7-.2 2.3-.3 5 0 5.8.4.8 2.3-1.8 4.1-4.6 23.4-5.4 44.8 10.8 47.1 33.7-.4-3.6-4.8-5.6-6.9-5.1-1 2.4-2.7 5.6-5.4 7.5.2-2.2.1-4.4-.3-6.6-.7 3-2.1 5.9-4.1 8.3-3.1.2-6.3-1.3-7.9-3.6-.1-.1-.2-.3-.3-.4-.1-.2-.2-.5-.3-.7-.1-.2-.2-.5-.2-.7v-.7-.5c0-.2.1-.5.2-.7.1-.2.1-.5.2-.7.1-.2.2-.5.4-.7.6-1.6.6-2.9-.5-3.6l-.6-.3c-.1 0-.3-.1-.4-.1-.1 0-.2-.1-.3-.1-.2-.1-.5-.1-.7-.2-.2-.1-.5-.1-.7-.1-.2 0-.5-.1-.7-.1h-.5c-.3 0-.5 0-.7.1-.2 0-.5.1-.7.1-.2.1-.5.1-.7.2-.2.1-.4.2-.7.3l-.6.3c-7.7 5-3.1 16.8 2.1 20.2-2 .4-4 .8-4.6 1.2l-.1.1c1.4.9 2.9 1.6 4.5 2.2 2.1.7 4.4 1.3 5.4 1.6 2.7.6 5.5.8 8.3.6 14.6-1 26.6-12.2 28.8-26.8.1.3.1.6.2.9.1.6.2 1.2.3 1.9.1.3.1.6.1.9v.1c0 .3.1.6.1.9 0 .4.1.7.1 1.1V91.6c0 .3-.1.5-.1.8v.3c0 .3-.1.6-.1 1-.1.3-.1.6-.2.9v.1c-.1.3-.1.6-.2.9v.1c-.1.3-.1.6-.2.9v.1l-.3.9v.1c-.1.3-.2.7-.3 1-.1.3-.2.6-.4 1-.1.3-.2.7-.4 1-.1.3-.3.6-.4 1-.1.3-.3.6-.4.9 0 .1-.1.2-.1.2s0 .1-.1.1c-2.1 4.3-5.3 8.1-9.3 11.1-.3.2-.5.4-.8.6-.1.1-.2.1-.2.2-.2.2-.5.3-.7.5l.1.2c.5-.1.9-.1 1.4-.2.9-.1 1.7-.3 2.6-.5.2 0 .5-.1.7-.2.2 0 .3-.1.5-.1s.5-.1.7-.1c.2-.1.4-.1.6-.2 3.3-.8 6.5-1.9 9.6-3.2-5.3 7.2-12.3 13-20.5 16.8 3.8-.3 7.6-.9 11.3-2 13.3-3.9 24.5-12.9 31.2-25-1.4 7.6-4.4 14.9-8.9 21.3 3.2-2.1 6.1-4.6 8.8-7.3 7.4-7.7 12.3-17.6 13.9-28.1 1.1 5.2 1.5 10.6 1 15.9 23.9-33.3 2-67.8-7.2-76.9 0-.1-.1-.1-.1-.2v0c0 .4 0 .8-.1 1.2-.1.8-.2 1.5-.3 2.2-.2.7-.4 1.5-.6 2.2-.2.7-.5 1.4-.8 2.1-.3.7-.6 1.4-1 2-.4.6-.8 1.3-1.2 1.9-.4.6-.9 1.2-1.4 1.8-.5.6-1 1.1-1.6 1.7-.3.3-.6.6-1 .8-.3.2-.5.4-.8.7-.6.5-1.2.9-1.9 1.3-.6.4-1.3.8-2 1.1l-2.1.9c-.7.3-1.4.5-2.1.7-.7.2-1.5.4-2.2.5-.8.1-1.5.2-2.2.3-.5 0-1.1.1-1.6.1-.8 0-1.5-.1-2.2-.1-.8-.1-1.5-.2-2.2-.3-.8-.1-1.5-.3-2.2-.6.7-.1 1.5-.1 2.2-.3.8-.1 1.5-.3 2.2-.5.7-.2 1.5-.4 2.1-.7l2.1-.9c.7-.3 1.3-.7 2-1.1.6-.4 1.3-.9 1.9-1.3.6-.5 1.2-1 1.7-1.5.6-.5 1.1-1.1 1.6-1.6.5-.6 1-1.2 1.4-1.8.1-.1.1-.2.2-.3.3-.5.7-1.1 1-1.6.4-.7.7-1.3 1-2 .3-.7.6-1.4.8-2.1l.6-2.1c.1-.8.3-1.5.3-2.2.1-.8.1-1.5.1-2.2 0-.5 0-1.1-.1-1.6-.1-.8-.2-1.5-.3-2.2-.1-.8-.3-1.5-.5-2.2-.2-.7-.5-1.4-.7-2.1-.3-.7-.6-1.4-.9-2-.4-.7-.7-1.3-1.1-2-.4-.6-.9-1.2-1.3-1.8-.5-.6-1-1.1-1.5-1.7-.3-.3-.6-.6-.9-.8-1.5-1.2-3-2.2-4.6-3.2-.2-.1-.4-.2-.7-.3-1.3-1.1-2.3-1.4-3.3-1.8z"
-          />{" "}
-        </svg>
+        />
       ),
     },
     {
@@ -221,7 +209,7 @@ const About = ({}: AboutProps) => {
     },
   ];
 
-  const databasesAndCaching: Skill[] = [
+  const databases: Skill[] = [
     {
       name: "PostgreSQL",
       url: "https://www.postgresql.org",
@@ -257,7 +245,54 @@ const About = ({}: AboutProps) => {
     },
   ];
 
-  const devOpsAndCloud: Skill[] = [
+  const apiAndSecurity: Skill[] = [
+    {
+      name: "Swagger",
+      url: "https://swagger.io",
+      logo: (
+        <img
+          src="https://svgstack.com/media/img/swagger-logo-xTUe014050.webp"
+          alt="Swagger"
+          className="w-12 h-12"
+        />
+      ),
+    },
+    {
+      name: "Postman",
+      url: "https://postman.com",
+      logo: (
+        <img
+          src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
+          alt="Postman"
+          className="w-12 h-12"
+        />
+      ),
+    },
+    {
+      name: "JWT",
+      url: "https://jwt.io/",
+      logo: (
+        <img
+          src="https://cdn.worldvectorlogo.com/logos/jwt-3.svg"
+          alt="JWT"
+          className="w-12 h-12"
+        />
+      ),
+    },
+    {
+      name: "Socket.io",
+      url: "https://socket.io",
+      logo: (
+        <img
+          src="https://cdn.worldvectorlogo.com/logos/socket-io.svg"
+          alt="Socket.io"
+          className="w-12 h-12"
+        />
+      ),
+    },
+  ];
+
+  const devopsAndCloud: Skill[] = [
     {
       name: "Git",
       url: "https://git-scm.com/",
@@ -273,11 +308,16 @@ const About = ({}: AboutProps) => {
       name: "GitHub",
       url: "https://github.com/",
       logo: (
-        <img
-          src="https://www.vectorlogo.zone/logos/github/github-icon.svg"
-          alt="GitHub"
-          className="w-12 h-12"
-        />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 128 128"
+          className="w-20 h-12 fill-(--text-color)"
+        >
+          <g fill="#181616">
+            <path d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z" />
+            <path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0" />
+          </g>
+        </svg>
       ),
     },
     {
@@ -319,7 +359,7 @@ const About = ({}: AboutProps) => {
       logo: (
         <svg
           viewBox="0 0 110 21"
-          className={`w-20 h-12 fill-(--text-color)`}
+          className="w-20 h-12 fill-(--text-color)"
           xmlns="http://www.w3.org/2000/svg"
           aria-label="Render"
         >
@@ -339,7 +379,7 @@ const About = ({}: AboutProps) => {
       url: "https://neon.tech/",
       logo: (
         <img
-          src="https://neon.tech/favicon.ico"
+          src="https://neon.com/brand/neon-logomark-dark-color.svg?updated=2026-01-21&dpl=dpl_FCcLm8Lf8CLdXLeDhCFs1uXXgHUJ"
           alt="Neon"
           className="w-12 h-12"
         />
@@ -347,72 +387,25 @@ const About = ({}: AboutProps) => {
     },
   ];
 
-  const apiDesignAndSecurity: Skill[] = [
+  const toolsAndAI: Skill[] = [
     {
-      name: "Swagger",
-      url: "https://swagger.io",
+      name: "GitHub Copilot",
+      url: "https://github.com/features/copilot",
       logo: (
         <img
-          src="https://svgstack.com/media/img/swagger-logo-xTUe014050.webp"
-          alt="Swagger"
+          src="https://github.githubassets.com/images/modules/site/copilot/copilot.png"
+          alt="GitHub Copilot"
           className="w-12 h-12"
         />
       ),
     },
     {
-      name: "Postman",
-      url: "https://postman.com",
+      name: "Windsurf",
+      url: "https://windsurf.ai/",
       logo: (
         <img
-          src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
-          alt="Postman"
-          className="w-12 h-12"
-        />
-      ),
-    },
-    {
-      name: "JWT",
-      url: "https://jwt.io/",
-      logo: (
-        <img
-          src="https://cdn.worldvectorlogo.com/logos/jwt-3.svg"
-          alt="JWT"
-          className="w-12 h-12"
-        />
-      ),
-    },
-  ];
-
-  const toolsAndEnvironment: Skill[] = [
-    {
-      name: "npm",
-      url: "https://www.npmjs.com/",
-      logo: (
-        <img
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg"
-          alt="npm"
-          className="w-12 h-12"
-        />
-      ),
-    },
-    {
-      name: "Maven",
-      url: "https://maven.apache.org/",
-      logo: (
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/5/52/Apache_Maven_logo.svg"
-          alt="Maven"
-          className="w-12 h-12"
-        />
-      ),
-    },
-    {
-      name: "Linux",
-      url: "https://www.linux.org/",
-      logo: (
-        <img
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
-          alt="Linux"
+          src="https://windsurf.ai/favicon.ico"
+          alt="Windsurf"
           className="w-12 h-12"
         />
       ),
@@ -424,28 +417,6 @@ const About = ({}: AboutProps) => {
         <img
           src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original-wordmark.svg"
           alt="VS Code"
-          className="w-12 h-12"
-        />
-      ),
-    },
-    {
-      name: "IntelliJ IDEA",
-      url: "https://www.jetbrains.com/idea/",
-      logo: (
-        <img
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/intellij/intellij-original.svg"
-          alt="IntelliJ IDEA"
-          className="w-12 h-12"
-        />
-      ),
-    },
-    {
-      name: "Figma",
-      url: "https://www.figma.com/",
-      logo: (
-        <img
-          src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
-          alt="Figma"
           className="w-12 h-12"
         />
       ),
@@ -513,27 +484,26 @@ const About = ({}: AboutProps) => {
           />
 
           <SkillCard
-            title="Databases & Caching"
+            title="Databases"
             icon={<i className="fa-solid fa-database"></i>}
-            skills={databasesAndCaching}
+            skills={databases}
           />
 
+          <SkillCard
+            title="API & Security"
+            icon={<i className="fa-solid fa-shield"></i>}
+            skills={apiAndSecurity}
+          />
           <SkillCard
             title="DevOps & Cloud"
             icon={<i className="fa-solid fa-cloud-arrow-up"></i>}
-            skills={devOpsAndCloud}
+            skills={devopsAndCloud}
           />
 
           <SkillCard
-            title="API Design & Security"
-            icon={<i className="fa-solid fa-shield"></i>}
-            skills={apiDesignAndSecurity}
-          />
-
-          <SkillCard
-            title="Tools & Environment"
+            title="Tools & AI"
             icon={<i className="fa-solid fa-wrench"></i>}
-            skills={toolsAndEnvironment}
+            skills={toolsAndAI}
           />
         </motion.div>
 

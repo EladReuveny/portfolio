@@ -87,7 +87,7 @@ const Services = ({}: ServicesProps) => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="mt-16 px-2"
+      className="px-2"
     >
       <header>
         <h1 className="text-4xl font-bold text-center py-2 border-y-2 border-(--primary-color)">
@@ -109,10 +109,10 @@ const Services = ({}: ServicesProps) => {
               },
             },
           }}
-          className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {services.map((service, i) => (
-            <ServiceCard key={i} service={service} />
+            <ServiceCard key={`service-${i}`} service={service} />
           ))}
         </motion.div>
       </main>

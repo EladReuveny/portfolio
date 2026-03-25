@@ -50,7 +50,7 @@ const Contact = ({}: ContactProps) => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="mt-16 px-2"
+      className="px-2"
     >
       <header>
         <h1 className="text-4xl font-bold text-center py-2 border-y-2 border-(--primary-color)">

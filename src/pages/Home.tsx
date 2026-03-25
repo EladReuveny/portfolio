@@ -27,7 +27,7 @@ const Home = ({}: HomeProps) => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="mt-16 px-2"
+      className="px-2"
     >
       <header className="font-bold text-center mb-5">
         {" "}
@@ -74,13 +74,14 @@ const Home = ({}: HomeProps) => {
           </p>
           <p className="text-(--text-color)/60">
             Strong foundation in RESTful API design, microservices architecture
-            (synchronous and message-driven communication), caching strategies,
-            and database management, responsive UI/UX, and deploying apps on
-            modern cloud platforms. Familiar with CI/CD pipelines and automated
-            deployment workflows. A fast, self-driven learner with strong
-            problem-solving skills, highly effective independently or in teams,
-            and passionate about delivering high-quality, user-focused
-            solutions.
+            (synchronous and message-driven communication), real-time systems,
+            caching strategies, and database management, responsive UI/​UX, and
+            deploying apps on modern cloud platforms. Familiar with CI/​CD
+            pipelines and automated deployment workflows. A fast, self-driven
+            learner with strong problem-solving skills, effective both
+            independently and in team environments, and passionate about
+            delivering high-quality, user-focused solutions using modern
+            AI-driven development workflows.
           </p>
         </div>
 

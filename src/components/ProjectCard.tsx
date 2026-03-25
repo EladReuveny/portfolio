@@ -13,9 +13,9 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         hidden: { opacity: 0, y: -20 },
         visible: { opacity: 1, y: 0 },
       }}
-      className="relative group py-6 px-2 text-center bg-(--text-color)/10 rounded-lg shadow-2xl"
+      className="relative group py-6 px-4 text-center bg-(--text-color)/10 rounded-lg shadow-2xl"
     >
-      <span className="absolute top-2 right-2 text-sm text-">
+      <span className="absolute top-2 right-2 text-sm text-(--text-color)/60">
         #{index + 1}
       </span>
       <h2 className="font-bold text-2xl text-(--primary-color)">
@@ -25,12 +25,15 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       <div className="space-y-4 mt-2">
         {project.technologies.frontend && (
           <div className="flex flex-col items-center gap-1">
-            <h3 className="font-bold text-lg text-(--primary-color)">
+            <h3 className="font-bold text-xl text-(--primary-color)">
               Frontend
             </h3>
-            <div className="flex flex-wrap items-center gap-5">
+            <div className="mt-1.5 flex flex-wrap items-center gap-5">
               {project.technologies.frontend?.map((tech, i) => (
-                <div key={i} className="flex flex-col items-center gap-2">
+                <div
+                  key={`frontend-tech-${i}`}
+                  className="flex flex-col items-center gap-2"
+                >
                   {tech.logo}
                   <span className="text-sm">{tech.name}</span>
                 </div>
@@ -41,12 +44,15 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
 
         {project.technologies.backend && (
           <div className="flex flex-col items-center gap-1">
-            <h3 className="font-bold text-lg text-(--primary-color)">
+            <h3 className="font-bold text-xl text-(--primary-color)">
               Backend
             </h3>
-            <div className="flex flex-wrap items-center gap-5">
+            <div className="mt-1.5 flex flex-wrap items-center gap-5">
               {project.technologies.backend?.map((tech, i) => (
-                <div key={i} className="flex flex-col items-center gap-2">
+                <div
+                  key={`backend-tech-${i}`}
+                  className="flex flex-col items-center gap-2"
+                >
                   {tech.logo}
                   <span className="text-sm">{tech.name}</span>
                 </div>

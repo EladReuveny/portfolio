@@ -26,7 +26,7 @@ const SocialLinks = ({}: SocialLinksProps) => {
     <div className="flex justify-center items-center gap-3 mb-3 text-(--primary-color)">
       {socialLinks.map((link, i) => (
         <a
-          key={i}
+          key={`social-link-${i}`}
           href={link.url}
           target="_blank"
           title={link.title}

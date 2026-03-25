@@ -8,7 +8,7 @@ const Projects = ({}: ProjectsProps) => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Intellectify — Full Stack Social Media Platform",
+      title: "Intellectify - Full Stack Social Media Platform",
       description:
         "Intellectify is a scalable full-stack knowledge-sharing platform built using a microservices architecture, enabling users to read, write, and explore knowledge across various topics.",
       technologies: {
@@ -34,7 +34,7 @@ const Projects = ({}: ProjectsProps) => {
             ),
           },
           {
-            name: "TanStack Query",
+            name: "React Query",
             logo: (
               <img
                 src="https://raw.githubusercontent.com/bestofjs/bestofjs/master/apps/web/public/logos/react-query.svg"
@@ -46,11 +46,16 @@ const Projects = ({}: ProjectsProps) => {
           {
             name: "Tailwind CSS",
             logo: (
-              <img
-                src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
-                alt="Tailwind CSS"
-                className="w-12 h-12"
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                className={`w-20 h-12 fill-(--text-color)`}
+              >
+                <path
+                  d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
+                  fill="#38bdf8"
+                />
+              </svg>
             ),
           },
         ],
@@ -132,11 +137,16 @@ const Projects = ({}: ProjectsProps) => {
           {
             name: "Tailwind CSS",
             logo: (
-              <img
-                src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
-                alt="Tailwind CSS"
-                className="w-12 h-12"
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                className={`w-20 h-12 fill-(--text-color)`}
+              >
+                <path
+                  d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
+                  fill="#38bdf8"
+                />
+              </svg>
             ),
           },
         ],
@@ -208,6 +218,119 @@ const Projects = ({}: ProjectsProps) => {
 
     {
       id: 3,
+      title: "Art Talks - Full Stack Real-Time Art Platform",
+      description:
+        "Art Talks is a full-stack real-time art platform that combines a visual art gallery with a live discussion forum. The app allows art enthusiasts to share artwork and have interactive conversations in real time.",
+      technologies: {
+        frontend: [
+          {
+            name: "React",
+            logo: (
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+                alt="React"
+                className="w-12 h-12"
+              />
+            ),
+          },
+          {
+            name: "TypeScript",
+            logo: (
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+                alt="TypeScript"
+                className="w-12 h-12"
+              />
+            ),
+          },
+          {
+            name: "React Query",
+            logo: (
+              <img
+                src="https://raw.githubusercontent.com/bestofjs/bestofjs/master/apps/web/public/logos/react-query.svg"
+                alt="TanStack Query"
+                className="w-12 h-12"
+              />
+            ),
+          },
+          {
+            name: "Tailwind CSS",
+            logo: (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 128 128"
+                className={`w-20 h-12 fill-(--text-color)`}
+              >
+                <path
+                  d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0"
+                  fill="#38bdf8"
+                />
+              </svg>
+            ),
+          },
+          {
+            name: "Socket.io",
+            logo: (
+              <img
+                src="https://cdn.worldvectorlogo.com/logos/socket-io.svg"
+                alt="Socket.io"
+                className="w-12 h-12"
+              />
+            ),
+          },
+        ],
+        backend: [
+          {
+            name: "NestJS",
+            logo: (
+              <img
+                src="https://nestjs.com/img/logo-small.svg"
+                alt="NestJS"
+                className="w-12 h-12"
+              />
+            ),
+          },
+          {
+            name: "PostgreSQL",
+            logo: (
+              <img
+                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
+                alt="PostgreSQL"
+                className="w-12 h-12"
+              />
+            ),
+          },
+          {
+            name: "Socket.io",
+            logo: (
+              <img
+                src="https://cdn.worldvectorlogo.com/logos/socket-io.svg"
+                alt="Socket.io"
+                className="w-12 h-12"
+              />
+            ),
+          },
+          {
+            name: "Docker",
+            logo: (
+              <img
+                src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg"
+                alt="Docker"
+                className="w-12 h-12"
+              />
+            ),
+          },
+        ],
+      },
+      sourceCode: {
+        frontend: "https://github.com/EladReuveny/art-talks",
+        backend: "https://github.com/EladReuveny/art-talks",
+      },
+      liveDemo: "https://art-talks.netlify.app",
+    },
+
+    {
+      id: 4,
       title: "Electronics - E-Commerce Platform",
       description:
         "A full-stack e-commerce platform that allows users to browse, purchase, and manage electronic products with authentication, order tracking, and an optimized shopping experience.",
@@ -265,7 +388,7 @@ const Projects = ({}: ProjectsProps) => {
     },
 
     {
-      id: 4,
+      id: 5,
       title: "Assembly Project",
       description: "Converts assembly code to machine code using C language.",
       technologies: {
@@ -288,7 +411,7 @@ const Projects = ({}: ProjectsProps) => {
     },
 
     {
-      id: 5,
+      id: 6,
       title: "Pokémon Search App",
       description: "Search Pokémons and their evolutions by ID or name.",
       technologies: {
@@ -312,7 +435,7 @@ const Projects = ({}: ProjectsProps) => {
     },
 
     {
-      id: 6,
+      id: 7,
       title: "TicTacToe",
       description:
         "TicTacToe game supports both singleplayer (against A.I.) and multiplayer modes.",
@@ -337,7 +460,7 @@ const Projects = ({}: ProjectsProps) => {
     },
 
     {
-      id: 7,
+      id: 8,
       title: "Restaurant Menu Manager",
       description:
         "Manage and interact with a restaurant menu using Java and JavaFX.",
@@ -366,7 +489,7 @@ const Projects = ({}: ProjectsProps) => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="mt-16 px-2"
+      className="px-2"
     >
       <header>
         <h1 className="text-4xl font-bold text-center py-2 border-y-2 border-(--primary-color)">
@@ -388,7 +511,7 @@ const Projects = ({}: ProjectsProps) => {
               },
             },
           }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-5"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />

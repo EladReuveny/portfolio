@@ -26,7 +26,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
       <p className="mb-3">{service.description}</p>
       <ul className="text-start space-y-2">
         {service.items.map((item, i) => (
-          <li key={i}>
+          <li key={`service-item-${i}`}>
             <i className="fa-regular fa-circle-check text-xl text-(--text-color) mr-2"></i>
             {item}
           </li>

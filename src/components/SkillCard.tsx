@@ -27,9 +27,9 @@ const SkillCard = ({ title, icon, skills }: SkillCardProps) => {
         {title}
       </h2>
       <div className="flex items-center flex-wrap gap-6 whitespace-nowrap">
-        {skills.map((skill, index) => (
+        {skills.map((skill, i) => (
           <a
-            key={index}
+            key={`skill-${i}`}
             href={skill.url}
             target="_blank"
             title={skill.name}
