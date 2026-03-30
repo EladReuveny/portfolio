@@ -14,6 +14,7 @@ const Services = ({}: ServicesProps) => {
         "TypeScript, JavaScript",
         "HTML5, CSS3",
         "React, Tailwind CSS",
+        "Client State Management (Zustand & Jotai & Context API)",
         "Server State Management (TanStack Query)",
         "Form State Management (TanStack Form) & Schema Validation (Zod)",
         "RESTful API Integration & Data Fetching Strategies",
@@ -46,7 +47,7 @@ const Services = ({}: ServicesProps) => {
       img: <i className="fa-solid fa-cloud-arrow-up text-3xl"></i>,
       items: [
         "Containerization & Orchestration: Docker, Docker Compose",
-        "Cloud Platforms: AWS (S3, CloudFront, Route 53, ECS, ECR), Netlify, Render, Neon",
+        "Cloud Platforms: AWS (S3, CloudFront, Route 53, ECS, RDS, IAM, CloudWatch), Netlify, Render, Neon",
         "Version Control & Collaboration: Git & GitHub",
         "CI/CD Pipelines: GitHub Actions",
       ],

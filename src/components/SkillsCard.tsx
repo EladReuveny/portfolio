@@ -7,13 +7,13 @@ export type Skill = {
   logo: JSX.Element;
 };
 
-type SkillCardProps = {
+type SkillsCardProps = {
   title: string;
   icon: JSX.Element;
   skills: Skill[];
 };
 
-const SkillCard = ({ title, icon, skills }: SkillCardProps) => {
+const SkillsCard = ({ title, icon, skills }: SkillsCardProps) => {
   return (
     <motion.div
       variants={{
@@ -44,4 +44,4 @@ const SkillCard = ({ title, icon, skills }: SkillCardProps) => {
   );
 };
 
-export default SkillCard;
+export default SkillsCard;

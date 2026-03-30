@@ -49,39 +49,44 @@ const Home = ({}: HomeProps) => {
             problem-solving, web development, and exploring new technologies.
           </p>
           <p className="text-(--text-color)/60">
-            I primarily work with <strong>NestJS </strong>(primary) or{" "}
-            <strong>Spring Boot</strong> on the backend, integrated with{" "}
+            I specialize in building backend services using{" "}
+            <strong>NestJS</strong>, and have experience working with{" "}
+            <strong>Spring Boot</strong>. On the frontend, I work with{" "}
             <strong>React</strong>, <strong>TypeScript</strong>, and{" "}
-            <strong>Tailwind CSS</strong> on the frontend. I leverage{" "}
-            <strong>TanStack Query</strong> for server state management,{" "}
-            <strong>TanStack Form</strong> with <strong>Zod</strong> for robust
-            form state management and schema validation, and{" "}
-            <strong>Jotai</strong> for client state management. For data
-            management and environment consistency, I use{" "}
-            <strong>PostgreSQL</strong> along with <strong>Redis</strong> for
-            caching and fast data access, and <strong>Docker</strong> for
-            containerization and deployment. Development and collaboration are
-            supported by <strong>Git & GitHub</strong> for version control,{" "}
-            <strong>Postman</strong> for API testing, and{" "}
-            <strong>Swagger</strong> for comprehensive API documentation. My
-            deployment workflow includes <strong>Netlify</strong> for frontend
-            delivery, <strong>Render</strong> for backend hosting, and{" "}
-            <strong>Neon</strong> for cloud storage. I also work with{" "}
-            <strong>AWS</strong> services such as <strong>S3</strong>,{" "}
-            <strong>CloudFront</strong>, <strong>Route 53</strong>, and
-            container-based deployments using <strong>ECS</strong> and{" "}
-            <strong>ECR</strong>.
+            <strong>Tailwind CSS</strong> to create modern, responsive user
+            interfaces. I use <strong>TanStack Query</strong> for server state
+            management, <strong>Zustand & Jotai</strong> for client state
+            management, and <strong>TanStack Form</strong> with{" "}
+            <strong>Zod</strong> for robust form state management and schema
+            validation. For data management and environment consistency, I use{" "}
+            <strong>PostgreSQL</strong> as the database, along with{" "}
+            <strong>Redis</strong> for caching and fast data access, and{" "}
+            <strong>Docker</strong> for containerization and deployment.
+            Development and collaboration are supported by{" "}
+            <strong>Git & GitHub</strong> for version control,{" "}
+            <strong>Swagger</strong> for comprehensive API documentation, and{" "}
+            <strong>Postman</strong> for API testing. My deployment workflow
+            includes <strong>Netlify</strong> for frontend delivery,{" "}
+            <strong>Render</strong> for backend hosting, and{" "}
+            <strong>Neon</strong> for managed serverless PostgreSQL. Familiar
+            with <strong>AWS</strong> services such as <strong>S3</strong>{" "}
+            (Storage), <strong>CloudFront</strong> (CDN),{" "}
+            <strong>Route 53</strong> (DNS), <strong>ECS</strong> (Container
+            Orchestration), <strong>RDS</strong> (Relational Database Service),{" "}
+            <strong>IAM</strong> (Identity and Access Management), and{" "}
+            <strong>CloudWatch</strong> (Monitoring & Observability) to ensure
+            scalable, secure, and efficient deployment of applications in the
+            cloud.
           </p>
           <p className="text-(--text-color)/60">
             Strong foundation in RESTful API design, microservices architecture
-            (synchronous and message-driven communication), real-time systems,
-            caching strategies, and database management, responsive UI/​UX, and
-            deploying apps on modern cloud platforms. Familiar with CI/​CD
-            pipelines and automated deployment workflows. A fast, self-driven
-            learner with strong problem-solving skills, effective both
-            independently and in team environments, and passionate about
-            delivering high-quality, user-focused solutions using modern
-            AI-driven development workflows.
+            (message-driven systems), real-time systems, caching strategies, and
+            database management, responsive UI/​UX, and deploying apps on modern
+            cloud platforms. Familiar with CI/​CD pipelines and automated
+            deployment workflows. A fast, self-driven learner with strong
+            problem-solving skills, effective both independently and in team
+            environments, and passionate about delivering high-quality,
+            user-focused solutions using modern AI-driven development workflows.
           </p>
         </div>
 

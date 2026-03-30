@@ -8,8 +8,7 @@ type HeaderProps = {};
 const Header = ({}: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [customColor, setCustomColor] = useState<string>(() => {
-    const storedCustomColor = localStorage.getItem("customColor");
-    return storedCustomColor || "#58b0df";
+    return localStorage.getItem("customColor") || "hsl(261, 100%, 61%)";
   });
 
   const { theme, toggleTheme } = useTheme();
