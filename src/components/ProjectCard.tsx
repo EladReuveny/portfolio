@@ -28,7 +28,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             <h3 className="font-bold text-xl text-(--primary-color)">
               Frontend
             </h3>
-            <div className="mt-1.5 flex flex-wrap items-center gap-5">
+            <div className="mt-1.5 flex flex-wrap items-center justify-center gap-5">
               {project.technologies.frontend?.map((tech, i) => (
                 <div
                   key={`frontend-tech-${i}`}

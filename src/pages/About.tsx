@@ -125,12 +125,12 @@ const About = ({}: AboutProps) => {
           ),
         },
         {
-          name: "React Query",
-          url: "https://tanstack.com/query/latest",
+          name: "TanStack",
+          url: "https://tanstack.com/",
           logo: (
             <img
-              src="https://raw.githubusercontent.com/bestofjs/bestofjs/master/apps/web/public/logos/react-query.svg"
-              alt="TanStack Query"
+              src="https://tanstack.com/images/logos/logo-color-600.png"
+              alt="TanStack"
               className="w-12 h-12"
             />
           ),

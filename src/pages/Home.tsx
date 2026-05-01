@@ -56,7 +56,8 @@ const Home = ({}: HomeProps) => {
             <strong>Tailwind CSS</strong> to create modern, responsive user
             interfaces. I use <strong>TanStack Query</strong> for server state
             management, <strong>Zustand & Jotai</strong> for client state
-            management, and <strong>TanStack Form</strong> with{" "}
+            management, <strong>TanStack Router</strong> for type-safe routing
+            with modern navigation and <strong>TanStack Form</strong> with{" "}
             <strong>Zod</strong> for robust form state management and schema
             validation. For data management and environment consistency, I use{" "}
             <strong>PostgreSQL</strong> as the database, along with{" "}
@@ -81,8 +82,8 @@ const Home = ({}: HomeProps) => {
           <p className="text-(--text-color)/60">
             Strong foundation in RESTful API design, microservices architecture
             (message-driven systems), real-time systems, caching strategies, and
-            database management, responsive UI/​UX, and deploying apps on modern
-            cloud platforms. Familiar with CI/​CD pipelines and automated
+            database management, responsive UI/UX, and deploying apps on modern
+            cloud platforms. Familiar with CI/CD pipelines and automated
             deployment workflows. A fast, self-driven learner with strong
             problem-solving skills, effective both independently and in team
             environments, and passionate about delivering high-quality,
