@@ -21,20 +21,20 @@ const ThemeContextProvider = ({ children }: ThemeContextProviderProps) => {
     if (theme === "dark") {
       document.documentElement.style.setProperty(
         "--bg-color",
-        "hsl(220, 10%, 5%)"
+        "hsl(220, 10%, 5%)",
       );
       document.documentElement.style.setProperty(
         "--text-color",
-        "hsl(0, 0%, 100%)"
+        "hsl(0, 0%, 100%)",
       );
     } else {
       document.documentElement.style.setProperty(
         "--bg-color",
-        "hsl(0, 0%, 100%)"
+        "hsl(0, 0%, 100%)",
       );
       document.documentElement.style.setProperty(
         "--text-color",
-        "hsl(220, 10%, 5%)"
+        "hsl(220, 10%, 5%)",
       );
     }
   }, [theme]);
