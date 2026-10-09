@@ -1,90 +1,90 @@
 import { motion } from "motion/react";
 import ServiceCard, { type Service } from "../components/ServiceCard";
 
+const services: Service[] = [
+  {
+    title: "Frontend Development",
+    description:
+      "Designing and developing modern, responsive, and accessible user interfaces with an emphasis on performance, seamless user experience, and efficient API integration.",
+    img: <i className="fas fa-code text-3xl"></i>,
+    items: [
+      "TypeScript, JavaScript",
+      "HTML5, CSS3",
+      "React, Tailwind CSS",
+      "Server State Management (TanStack Query)",
+      "Client State Management (Zustand & Jotai & Context API)",
+      "Type-safe Routing (TanStack Router)",
+      "Form State Management (TanStack Form) & Schema Validation (Zod)",
+      "RESTful API Integration & Data Fetching Strategies",
+      "Caching, Mutations & Optimistic Updates",
+      "Responsive & Adaptive Design",
+      "UI/UX & Accessibility Best Practices",
+    ],
+  },
+
+  {
+    title: "Backend Development",
+    description:
+      "Developing robust, secure, and scalable server-side applications and APIs that bridge frontend and backend effectively. Experienced with modern deployment, testing, and JWT-based authentication.",
+    img: <i className="fa-solid fa-server text-3xl"></i>,
+    items: [
+      "TypeScript, JavaScript, Java, C#, C, C++, Python",
+      "NestJS, Express.js, Spring Boot, Node.js",
+      "PostgreSQL, MySQL",
+      "Drizzle ORM, TypeORM, Prisma ORM",
+      "Authentication & Authorization (JWT)",
+      "Database Design & Management & Caching",
+      "RESTful API Architecture & Testing",
+      "Containerization: Docker",
+    ],
+  },
+
+  {
+    title: "DevOps & Deployment",
+    description:
+      "Implementing efficient deployment workflows and containerization strategies to ensure scalability, reliability, and seamless integration across environments.",
+    img: <i className="fa-solid fa-cloud-arrow-up text-3xl"></i>,
+    items: [
+      "Containerization & Orchestration: Docker, Docker Compose",
+      "Cloud Platforms: AWS (S3, CloudFront, Route 53, ECS, RDS, IAM, CloudWatch), Netlify, Render, Neon",
+      "Version Control & Collaboration: Git & GitHub",
+      "CI/CD Pipelines: GitHub Actions",
+    ],
+  },
+
+  {
+    title: "Tools & Environment",
+    description:
+      "Technologies and platforms that streamline collaboration, enhance automation, and maintain code quality across the development lifecycle.",
+    img: <i className="fa-solid fa-wrench text-3xl"></i>,
+    items: [
+      "Version Control: Git & GitHub",
+      "API Testing & Documentation: Postman, Swagger",
+      "UI Collaboration: Figma",
+      "Development Tools: VS Code, IntelliJ IDEA",
+      "Operating Systems: Linux",
+    ],
+  },
+
+  {
+    title: "Personal & Soft Skills",
+    description:
+      "Soft skills that complement my technical expertise, fostering strong collaboration, adaptability, and continuous growth in dynamic environments.",
+    img: <i className="fa-solid fa-comments text-3xl"></i>,
+    items: [
+      "Problem-Solving",
+      "Teamwork & Collaboration",
+      "Adaptability & Open-Mindedness",
+      "Self-Motivation & Independence",
+      "Time Management",
+      "Continuous Learning",
+    ],
+  },
+];
+
 type ServicesProps = {};
 
 const Services = ({}: ServicesProps) => {
-  const services: Service[] = [
-    {
-      title: "Frontend Development",
-      description:
-        "Designing and developing modern, responsive, and accessible user interfaces with an emphasis on performance, seamless user experience, and efficient API integration.",
-      img: <i className="fas fa-code text-3xl"></i>,
-      items: [
-        "TypeScript, JavaScript",
-        "HTML5, CSS3",
-        "React, Tailwind CSS",
-        "Server State Management (TanStack Query)",
-        "Client State Management (Zustand & Jotai & Context API)",
-        "Type-safe Routing (TanStack Router)",
-        "Form State Management (TanStack Form) & Schema Validation (Zod)",
-        "RESTful API Integration & Data Fetching Strategies",
-        "Caching, Mutations & Optimistic Updates",
-        "Responsive & Adaptive Design",
-        "UI/UX & Accessibility Best Practices",
-      ],
-    },
-
-    {
-      title: "Backend Development",
-      description:
-        "Developing robust, secure, and scalable server-side applications and APIs that bridge frontend and backend effectively. Experienced with modern deployment, testing, and JWT-based authentication.",
-      img: <i className="fa-solid fa-server text-3xl"></i>,
-      items: [
-        "Java, TypeScript, C#, C, C++, Python",
-        "NestJS, Spring Boot, Express.js, Node.js",
-        "PostgreSQL, MySQL",
-        "Drizzle ORM",
-        "Authentication & Authorization (JWT)",
-        "Database Design & Management & Caching",
-        "RESTful API Architecture & Testing",
-        "Containerization: Docker",
-      ],
-    },
-
-    {
-      title: "DevOps & Deployment",
-      description:
-        "Implementing efficient deployment workflows and containerization strategies to ensure scalability, reliability, and seamless integration across environments.",
-      img: <i className="fa-solid fa-cloud-arrow-up text-3xl"></i>,
-      items: [
-        "Containerization & Orchestration: Docker, Docker Compose",
-        "Cloud Platforms: AWS (S3, CloudFront, Route 53, ECS, RDS, IAM, CloudWatch), Netlify, Render, Neon",
-        "Version Control & Collaboration: Git & GitHub",
-        "CI/CD Pipelines: GitHub Actions",
-      ],
-    },
-
-    {
-      title: "Tools & Environment",
-      description:
-        "Technologies and platforms that streamline collaboration, enhance automation, and maintain code quality across the development lifecycle.",
-      img: <i className="fa-solid fa-wrench text-3xl"></i>,
-      items: [
-        "Version Control: Git & GitHub",
-        "API Testing & Documentation: Postman, Swagger",
-        "UI Collaboration: Figma",
-        "Development Tools: VS Code, IntelliJ IDEA",
-        "Operating Systems: Linux",
-      ],
-    },
-
-    {
-      title: "Personal & Soft Skills",
-      description:
-        "Soft skills that complement my technical expertise, fostering strong collaboration, adaptability, and continuous growth in dynamic environments.",
-      img: <i className="fa-solid fa-comments text-3xl"></i>,
-      items: [
-        "Problem-Solving",
-        "Teamwork & Collaboration",
-        "Adaptability & Open-Mindedness",
-        "Self-Motivation & Independence",
-        "Time Management",
-        "Continuous Learning",
-      ],
-    },
-  ];
-
   return (
     <motion.section
       initial={{ opacity: 0, y: -20 }}

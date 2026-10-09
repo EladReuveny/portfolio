@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { type JSX } from "react";
+import { type JSX, type ReactNode } from "react";
 
 export type Skill = {
   name: string;
@@ -9,11 +9,11 @@ export type Skill = {
 
 type SkillsCardProps = {
   title: string;
-  icon: JSX.Element;
+  Icon: ReactNode;
   skills: Skill[];
 };
 
-const SkillsCard = ({ title, icon, skills }: SkillsCardProps) => {
+const SkillsCard = ({ title, Icon, skills }: SkillsCardProps) => {
   return (
     <motion.div
       variants={{
@@ -23,7 +23,7 @@ const SkillsCard = ({ title, icon, skills }: SkillsCardProps) => {
       className="pt-3 pb-10 px-4 bg-(--primary-color)/25 border-l-4 border-(--primary-color) hover:backdrop-brightness-200"
     >
       <h2 className="text-3xl font-bold text-(--primary-color) flex items-center justify-center gap-4 mb-5">
-        {icon}
+        {Icon}
         {title}
       </h2>
       <div className="flex items-center flex-wrap gap-6 whitespace-nowrap">

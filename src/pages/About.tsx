@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import type { JSX } from "react";
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import resume from "../assets/resume.pdf";
 import type { Skill } from "../components/SkillsCard";
@@ -9,10 +9,10 @@ import SliddingDashArrowIcon from "../components/SliddingDashArrowIcon";
 type AboutProps = {};
 
 const About = ({}: AboutProps) => {
-  const skillsCards: { title: string; icon: JSX.Element; skills: Skill[] }[] = [
+  const skillsCards: { title: string; Icon: ReactNode; skills: Skill[] }[] = [
     {
       title: "Programming Languages",
-      icon: <i className="material-symbols-outlined text-4xl!">code</i>,
+      Icon: <i className="material-symbols-outlined text-4xl!">code</i>,
       skills: [
         {
           name: "TypeScript",
@@ -95,7 +95,7 @@ const About = ({}: AboutProps) => {
     },
     {
       title: "Frontend",
-      icon: <i className="fa-solid fa-code"></i>,
+      Icon: <i className="fa-solid fa-code"></i>,
       skills: [
         {
           name: "React",
@@ -140,7 +140,7 @@ const About = ({}: AboutProps) => {
           url: "https://zustand-demo.pmnd.rs/",
           logo: (
             <img
-              src="https://logo.svgcdn.com/devicon/zustand-original.png"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/zustand/zustand-original.svg"
               alt="Zustand"
               className="w-12 h-12"
             />
@@ -194,7 +194,7 @@ const About = ({}: AboutProps) => {
     },
     {
       title: "Backend",
-      icon: <i className="fa-solid fa-server"></i>,
+      Icon: <i className="fa-solid fa-server"></i>,
       skills: [
         {
           name: "NestJS",
@@ -208,23 +208,23 @@ const About = ({}: AboutProps) => {
           ),
         },
         {
-          name: "Spring Boot",
-          url: "https://spring.io/projects/spring-boot",
-          logo: (
-            <img
-              src="https://spring.io/img/projects/spring-boot.svg"
-              alt="Spring Boot"
-              className="w-12 h-12"
-            />
-          ),
-        },
-        {
           name: "Express.js",
           url: "https://expressjs.com/",
           logo: (
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg"
               alt="Express.js"
+              className="w-12 h-12"
+            />
+          ),
+        },
+        {
+          name: "Spring Boot",
+          url: "https://spring.io/projects/spring-boot",
+          logo: (
+            <img
+              src="https://spring.io/img/projects/spring-boot.svg"
+              alt="Spring Boot"
               className="w-12 h-12"
             />
           ),
@@ -244,7 +244,7 @@ const About = ({}: AboutProps) => {
     },
     {
       title: "Databases",
-      icon: <i className="fa-solid fa-database"></i>,
+      Icon: <i className="fa-solid fa-database"></i>,
       skills: [
         {
           name: "PostgreSQL",
@@ -283,7 +283,7 @@ const About = ({}: AboutProps) => {
     },
     {
       title: "API & Security",
-      icon: <i className="fa-solid fa-shield"></i>,
+      Icon: <i className="fa-solid fa-shield"></i>,
       skills: [
         {
           name: "Swagger",
@@ -333,7 +333,7 @@ const About = ({}: AboutProps) => {
     },
     {
       title: "DevOps & Cloud",
-      icon: <i className="fa-solid fa-cloud-arrow-up"></i>,
+      Icon: <i className="fa-solid fa-cloud-arrow-up"></i>,
       skills: [
         {
           name: "Docker",
@@ -404,7 +404,7 @@ const About = ({}: AboutProps) => {
     },
     {
       title: "Tools",
-      icon: <i className="fa-solid fa-wrench"></i>,
+      Icon: <i className="fa-solid fa-wrench"></i>,
       skills: [
         {
           name: "Git",
