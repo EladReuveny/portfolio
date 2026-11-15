@@ -351,7 +351,7 @@ const About = ({}: AboutProps) => {
           url: "https://aws.amazon.com/",
           logo: (
             <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original.svg"
               alt="AWS"
               className="w-12 h-12"
             />
